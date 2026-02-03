@@ -2,7 +2,10 @@
 
 namespace Elementor\Modules\Variables\Classes;
 
+<<<<<<< HEAD
 use Elementor\Modules\Variables\Storage\Exceptions\Type_Mismatch;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use WP_Error;
 use Exception;
 use WP_REST_Server;
@@ -107,12 +110,15 @@ class Rest_Api {
 					'type' => 'integer',
 					'validate_callback' => [ $this, 'is_valid_order' ],
 				],
+<<<<<<< HEAD
 				'type' => [
 					'required' => false,
 					'type' => 'string',
 					'validate_callback' => [ $this, 'is_valid_variable_type' ],
 					'sanitize_callback' => [ $this, 'trim_and_sanitize_text_field' ],
 				],
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			],
 		] );
 
@@ -153,12 +159,15 @@ class Rest_Api {
 					'validate_callback' => [ $this, 'is_valid_variable_value' ],
 					'sanitize_callback' => [ $this, 'trim_and_sanitize_text_field' ],
 				],
+<<<<<<< HEAD
 				'type' => [
 					'required' => false,
 					'type' => 'string',
 					'validate_callback' => [ $this, 'is_valid_variable_type' ],
 					'sanitize_callback' => [ $this, 'trim_and_sanitize_text_field' ],
 				],
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			],
 		] );
 
@@ -182,7 +191,10 @@ class Rest_Api {
 	}
 
 	public function trim_and_sanitize_text_field( $value ) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		return trim( sanitize_text_field( $value ) );
 	}
 
@@ -310,17 +322,23 @@ class Rest_Api {
 		$label = $request->get_param( 'label' );
 		$value = $request->get_param( 'value' );
 		$order = $request->get_param( 'order' );
+<<<<<<< HEAD
 		$type = $request->get_param( 'type' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 		$update_data = [
 			'label' => $label,
 			'value' => $value,
 		];
 
+<<<<<<< HEAD
 		if ( $type ) {
 			$update_data['type'] = $type;
 		}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		if ( null !== $order ) {
 			$update_data['order'] = $order;
 		}
@@ -381,12 +399,15 @@ class Rest_Api {
 			$overrides['value'] = $value;
 		}
 
+<<<<<<< HEAD
 		$type = $request->get_param( 'type' );
 
 		if ( $type ) {
 			$overrides['type'] = $type;
 		}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		$result = $this->service->restore( $id, $overrides );
 
 		$this->clear_cache();
@@ -447,6 +468,7 @@ class Rest_Api {
 			);
 		}
 
+<<<<<<< HEAD
 		if ( $e instanceof Type_Mismatch ) {
 			return $this->prepare_error_response(
 				self::HTTP_BAD_REQUEST,
@@ -455,6 +477,8 @@ class Rest_Api {
 			);
 		}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		return $this->prepare_error_response(
 			self::HTTP_SERVER_ERROR,
 			'unexpected_server_error',
@@ -483,6 +507,10 @@ class Rest_Api {
 		return true;
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	public function is_valid_operations_array( $operations ) {
 		if ( ! is_array( $operations ) || empty( $operations ) ) {
 			return new WP_Error(

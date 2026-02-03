@@ -770,7 +770,10 @@ abstract class Element_Base extends Controls_Stack {
 			],
 			'data-id' => $id,
 			'data-element_type' => $this->get_type(),
+<<<<<<< HEAD
 			'data-e-type' => $this->get_type(),
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		] );
 
 		$class_settings = [];

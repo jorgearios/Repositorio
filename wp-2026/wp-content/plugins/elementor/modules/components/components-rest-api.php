@@ -7,7 +7,10 @@ use Elementor\Core\Utils\Api\Error_Builder;
 use Elementor\Core\Utils\Api\Response_Builder;
 use Elementor\Core\Utils\Collection;
 use Elementor\Modules\Components\Documents\Component;
+<<<<<<< HEAD
 use Elementor\Modules\Components\OverridableProps\Component_Overridable_Props_Parser;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -18,7 +21,11 @@ class Components_REST_API {
 	const API_BASE = 'components';
 	const LOCK_DOCUMENT_TYPE_NAME = 'components';
 	const STYLES_ROUTE = 'styles';
+<<<<<<< HEAD
 	const MAX_COMPONENTS = 100;
+=======
+	const MAX_COMPONENTS = 50;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 	private $repository = null;
 	public function register_hooks() {
@@ -91,10 +98,13 @@ class Components_REST_API {
 										'type' => 'object',
 									],
 								],
+<<<<<<< HEAD
 								'settings' => [
 									'type' => 'object',
 									'required' => false,
 								],
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 							],
 						],
 					],
@@ -102,6 +112,7 @@ class Components_REST_API {
 			],
 		] );
 
+<<<<<<< HEAD
 		register_rest_route( self::API_NAMESPACE, '/' . self::API_BASE . '/create-validate', [
 			[
 				'methods' => 'POST',
@@ -157,6 +168,8 @@ class Components_REST_API {
 			],
 		] );
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		register_rest_route( self::API_NAMESPACE, '/' . self::API_BASE . '/status', [
 			[
 				'methods' => 'PUT',
@@ -224,6 +237,7 @@ class Components_REST_API {
 				],
 			],
 		] );
+<<<<<<< HEAD
 
 		register_rest_route( self::API_NAMESPACE, '/' . self::API_BASE . '/archive', [
 			[
@@ -282,11 +296,14 @@ class Components_REST_API {
 				],
 			],
 		] );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	private function get_components() {
 		$components = $this->get_repository()->all();
 
+<<<<<<< HEAD
 		$components_list = array_values( $components
 			->map( fn( $component ) => [
 				'id' => $component['id'],
@@ -295,6 +312,13 @@ class Components_REST_API {
 				'isArchived' => $component['is_archived'] ?? false,
 			] )
 		->all() );
+=======
+		$components_list = $components->map( fn( $component ) => [
+			'id' => $component['id'],
+			'name' => $component['title'],
+			'uid' => $component['uid'],
+		])->all();
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 		return Response_Builder::make( $components_list )->build();
 	}
@@ -310,6 +334,7 @@ class Components_REST_API {
 		return Response_Builder::make( $styles )->build();
 	}
 
+<<<<<<< HEAD
 	private function get_overridable_props( \WP_REST_Request $request ) {
 		$component_id = (int) $request->get_param( 'componentId' );
 
@@ -338,6 +363,8 @@ class Components_REST_API {
 		return Response_Builder::make( $overridable )->build();
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	private function create_components( \WP_REST_Request $request ) {
 		$save_status = $request->get_param( 'status' );
 
@@ -348,11 +375,16 @@ class Components_REST_API {
 
 		if ( ! $result['success'] ) {
 			return Error_Builder::make( 'components_validation_failed' )
+<<<<<<< HEAD
 				->set_status( 422 )
+=======
+				->set_status( 400 )
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				->set_message( 'Validation failed: ' . implode( ', ', $result['messages'] ) )
 				->build();
 		}
 
+<<<<<<< HEAD
 		$circular_result = Circular_Dependency_Validator::make()->validate_new_components( $items );
 
 		if ( ! $circular_result['success'] ) {
@@ -376,10 +408,14 @@ class Components_REST_API {
 		$validation_errors = [];
 
 		$created = $items->map_with_keys( function ( $item ) use ( $save_status, &$validation_errors ) {
+=======
+		$created = $items->map_with_keys( function ( $item ) use ( $save_status ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			$title = sanitize_text_field( $item['title'] );
 			$content = $item['elements'];
 			$uid = $item['uid'];
 
+<<<<<<< HEAD
 			try {
 				$settings = isset( $item['settings'] ) ? $this->parse_settings( $item['settings'] ) : [];
 
@@ -404,11 +440,24 @@ class Components_REST_API {
 		}
 
 		return Response_Builder::make( $created->all() )
+=======
+			$status = Document::STATUS_AUTOSAVE === $save_status
+				? Document::STATUS_DRAFT
+				: $save_status;
+
+			$component_id = $this->get_repository()->create( $title, $content, $status, $uid );
+
+			return [ $uid => $component_id ];
+		} );
+
+		return Response_Builder::make( (object) $created->all() )
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			->set_status( 201 )
 			->build();
 	}
 
 	private function update_statuses( \WP_REST_Request $request ) {
+<<<<<<< HEAD
 		$result = Collection::make( $request->get_param( 'ids' ) )
 			->reduce(
 				function ( $result, int $component_id ) {
@@ -422,6 +471,28 @@ class Components_REST_API {
 					$publish_result = $this->get_repository()->publish_component( $component );
 
 					$result[ $publish_result ? 'success' : 'failed' ][] = $component_id;
+=======
+		$status = $request->get_param( 'status' );
+
+		$result = Collection::make( $request->get_param( 'ids' ) )
+			->map( fn( $id ) => $this->get_repository()->get( $id ) )
+			->filter( fn( $component ) => (bool) $component )
+			->reduce(
+				function ( $result, Component $component ) use ( $status ) {
+					$post = $component->get_post();
+					$autosave = $component->get_newer_autosave();
+
+					$elements = $autosave
+						? $autosave->get_json_meta( Document::ELEMENTOR_DATA_META_KEY )
+						: $component->get_json_meta( Document::ELEMENTOR_DATA_META_KEY );
+
+					$is_updated = $component->save( [
+						'settings' => [ 'post_status' => $status ],
+						'elements' => $elements,
+					] );
+
+					$result[ $is_updated ? 'success' : 'failed' ][] = $post->ID;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 					return $result;
 				},
@@ -520,6 +591,7 @@ class Components_REST_API {
 		}
 	}
 
+<<<<<<< HEAD
 	private function archive_components( \WP_REST_Request $request ) {
 		$component_ids = $request->get_param( 'componentIds' );
 		$status = $request->get_param( 'status' );
@@ -640,13 +712,20 @@ class Components_REST_API {
 		return $result;
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	private function route_wrapper( callable $cb ) {
 		try {
 			$response = $cb();
 		} catch ( \Exception $e ) {
 			return Error_Builder::make( 'unexpected_error' )
+<<<<<<< HEAD
 			->set_message( __( 'Something went wrong', 'elementor' ) )
 			->build();
+=======
+				->set_message( __( 'Something went wrong', 'elementor' ) )
+				->build();
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		}
 
 		return $response;

@@ -53,6 +53,7 @@ class Style_Schema {
 		return $prop_type;
 	}
 
+<<<<<<< HEAD
 	private function update_font_family( $prop_type ): Union_Prop_Type {
 
 		if ( $prop_type instanceof String_Prop_Type ) {
@@ -65,11 +66,20 @@ class Style_Schema {
 		}
 
 		return $prop_type;
+=======
+	private function update_font_family( String_Prop_Type $prop_type ): Union_Prop_Type {
+		return Union_Prop_Type::create_from( $prop_type )
+			->add_prop_type( Font_Variable_Prop_Type::make() );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	private function update_color( Color_Prop_Type $color_prop_type ): Union_Prop_Type {
 		return Union_Prop_Type::create_from( $color_prop_type )
+<<<<<<< HEAD
 					->add_prop_type( Color_Variable_Prop_Type::make() );
+=======
+			->add_prop_type( Color_Variable_Prop_Type::make() );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	private function update_array( Array_Prop_Type $array_prop_type ): Array_Prop_Type {

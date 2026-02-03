@@ -4,7 +4,11 @@ namespace Elementor\Modules\Components\Styles;
 
 use Elementor\Core\Base\Document;
 use Elementor\Core\Utils\Collection;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Styles\CacheValidity\Cache_Validity;
+=======
+use Elementor\Modules\AtomicWidgets\CacheValidity\Cache_Validity;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\AtomicWidgets\Utils\Utils;
 
 /**
@@ -39,8 +43,13 @@ class Component_Styles {
 
 		$components = $this->get_components_from_post( $post_id );
 		$component_ids = Collection::make( $components )
+<<<<<<< HEAD
 			->filter( fn( $component ) => isset( $component['settings']['component_instance']['value']['component_id']['value'] ) )
 			->map( fn( $component ) => $component['settings']['component_instance']['value']['component_id']['value'] )
+=======
+			->filter( fn( $component ) => isset( $component['settings']['component_instance']['value']['component_id'] ) )
+			->map( fn( $component ) => $component['settings']['component_instance']['value']['component_id'] )
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			->unique()
 			->all();
 

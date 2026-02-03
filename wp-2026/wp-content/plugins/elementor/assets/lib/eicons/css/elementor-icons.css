@@ -1,7 +1,12 @@
 @font-face {
   font-family: "eicons";
+<<<<<<< HEAD
   src: url("../fonts/eicons.eot?5.47.0");
   src: url("../fonts/eicons.eot?5.47.0#iefix") format("embedded-opentype"), url("../fonts/eicons.woff2?5.47.0") format("woff2"), url("../fonts/eicons.woff?5.47.0") format("woff"), url("../fonts/eicons.ttf?5.47.0") format("truetype"), url("../fonts/eicons.svg?5.47.0#eicon") format("svg");
+=======
+  src: url("../fonts/eicons.eot?5.46.0");
+  src: url("../fonts/eicons.eot?5.46.0#iefix") format("embedded-opentype"), url("../fonts/eicons.woff2?5.46.0") format("woff2"), url("../fonts/eicons.woff?5.46.0") format("woff"), url("../fonts/eicons.ttf?5.46.0") format("truetype"), url("../fonts/eicons.svg?5.46.0#eicon") format("svg");
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   font-weight: normal;
   font-style: normal;
 }
@@ -2007,6 +2012,7 @@
   content: "\ebdb";
 }
 
+<<<<<<< HEAD
 .eicon-atomic-label:before {
   content: "\e9ee";
 }
@@ -2027,6 +2033,8 @@
   content: "\e9f2";
 }
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 .eicon-eye:before {
   content: "\e8ac";
 }

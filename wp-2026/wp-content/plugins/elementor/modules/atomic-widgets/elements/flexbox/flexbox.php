@@ -1,8 +1,12 @@
 <?php
 namespace Elementor\Modules\AtomicWidgets\Elements\Flexbox;
 
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Element_Base;
 use Elementor\Modules\AtomicWidgets\PropDependencies\Manager as Dependency_Manager;
+=======
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Element_Base;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\AtomicWidgets\PropTypes\Primitives\String_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Size_Prop_Type;
 use Elementor\Modules\AtomicWidgets\Styles\Style_Definition;
@@ -11,10 +15,17 @@ use Elementor\Modules\AtomicWidgets\Controls\Section;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Html_Tag_Control;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Link_Control;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Text_Control;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\PropTypes\Attributes_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Classes_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Link_Prop_Type;
 use Elementor\Modules\Components\PropTypes\Overridable_Prop_Type;
+=======
+use Elementor\Modules\AtomicWidgets\PropDependencies\Manager as Dependency_Manager;
+use Elementor\Modules\AtomicWidgets\PropTypes\Classes_Prop_Type;
+use Elementor\Modules\AtomicWidgets\PropTypes\Attributes_Prop_Type;
+use Elementor\Modules\AtomicWidgets\PropTypes\Link_Prop_Type;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -23,11 +34,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Flexbox extends Atomic_Element_Base {
 	const BASE_STYLE_KEY = 'base';
 
+<<<<<<< HEAD
 	public function __construct( $data = [], $args = null ) {
 		parent::__construct( $data, $args );
 		$this->meta( 'is_container', true );
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	public static function get_type() {
 		return 'e-flexbox';
 	}
@@ -49,6 +63,7 @@ class Flexbox extends Atomic_Element_Base {
 	}
 
 	protected static function define_props_schema(): array {
+<<<<<<< HEAD
 		$tag_dependencies = Dependency_Manager::make( Dependency_Manager::RELATION_AND )
 			->where( [
 				'operator' => 'ne',
@@ -60,18 +75,28 @@ class Flexbox extends Atomic_Element_Base {
 					'value' => 'button',
 				],
 			] )->where( [
+=======
+		$tag_dependencies = Dependency_Manager::make()
+			->where( [
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				'operator' => 'not_exist',
 				'path' => [ 'link', 'destination' ],
 				'newValue' => [
 					'$$type' => 'string',
 					'value' => 'a',
 				],
+<<<<<<< HEAD
 			] )->get();
+=======
+			] )
+			->get();
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 		return [
 			'classes' => Classes_Prop_Type::make()
 				->default( [] ),
 			'tag' => String_Prop_Type::make()
+<<<<<<< HEAD
 				->enum( [ 'div', 'header', 'section', 'article', 'aside', 'footer', 'a', 'button' ] )
 				->default( 'div' )
 				->description( 'The HTML tag for the flexbox container. Could be div, header, section, article, aside, footer, or a (link).' )
@@ -81,6 +106,15 @@ class Flexbox extends Atomic_Element_Base {
 		];
 
 		return $schema;
+=======
+				->enum( [ 'div', 'header', 'section', 'article', 'aside', 'footer', 'a' ] )
+				->default( 'div' )
+				->set_dependencies( $tag_dependencies )
+				->description( 'The HTML tag for the flexbox container. Could be div, header, section, article, aside, footer, or a (link).' ),
+			'link' => Link_Prop_Type::make(),
+			'attributes' => Attributes_Prop_Type::make(),
+		];
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	protected function define_atomic_controls(): array {
@@ -175,8 +209,12 @@ class Flexbox extends Atomic_Element_Base {
 		}
 
 		if ( ! empty( $settings['link']['href'] ) ) {
+<<<<<<< HEAD
 			$link_attributes = $this->get_link_attributes( $settings['link'] );
 			$attributes = array_merge( $attributes, $link_attributes );
+=======
+			$attributes = array_merge( $attributes, $settings['link'] );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		}
 
 		$this->add_render_attribute( '_wrapper', array_merge( $initial_attributes, $attributes ) );

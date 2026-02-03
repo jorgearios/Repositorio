@@ -42,12 +42,19 @@ __( 'Sorry, nothing matched', 'elementor' );
 __( 'Try something else.', 'elementor' );
 __( 'Clear & try again', 'elementor' );
 __( 'Streamline your workflow with dynamic tags', 'elementor' );
+<<<<<<< HEAD
 __( 'Upgrade now to display your content dynamically.', 'elementor' );
+=======
+__( "You'll need Elementor Pro to use this feature.", 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Remove dynamic value', 'elementor' );
 __( 'Dynamic tags', 'elementor' );
 __( 'Dynamic settings', 'elementor' );
 __( 'Dynamic settings', 'elementor' );
+<<<<<<< HEAD
 __( 'Custom CSS', 'elementor' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /* translators: %s is the class name. */
 __( `class %s applied`, 'elementor' );
 /* translators: %s is the class name. */
@@ -64,9 +71,14 @@ __( 'Sorry, nothing matched', 'elementor' );
 __( 'With your current role,', 'elementor' );
 __( 'you can only use existing classes.', 'elementor' );
 __( 'Clear & try again', 'elementor' );
+<<<<<<< HEAD
 /* translators: %s is the maximum number of classes */
 __(
 					'You’ve reached the limit of %s classes. Please remove an existing one to create a new class.',
+=======
+__(
+					'You’ve reached the limit of 50 classes. Please remove an existing one to create a new class.',
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 					'elementor'
 				);
 __( 'normal', 'elementor' );
@@ -258,6 +270,7 @@ __( 'Soft light', 'elementor' );
 __( 'Hard light', 'elementor' );
 __( 'Border width', 'elementor' );
 __( 'Top', 'elementor' );
+<<<<<<< HEAD
 __( 'Border top width', 'elementor' );
 __( 'Left', 'elementor' );
 __( 'Right', 'elementor' );
@@ -269,6 +282,13 @@ __( 'Right', 'elementor' );
 __( 'Left', 'elementor' );
 __( 'Border right width', 'elementor' );
 __( 'Border left width', 'elementor' );
+=======
+__( 'Left', 'elementor' );
+__( 'Right', 'elementor' );
+__( 'Bottom', 'elementor' );
+__( 'Right', 'elementor' );
+__( 'Left', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Adjust borders', 'elementor' );
 __( 'Border type', 'elementor' );
 __( 'None', 'elementor' );
@@ -283,6 +303,7 @@ __( 'Outset', 'elementor' );
 __( 'Border radius', 'elementor' );
 __( 'Top right', 'elementor' );
 __( 'Top left', 'elementor' );
+<<<<<<< HEAD
 __( 'Border top right radius', 'elementor' );
 __( 'Border top left radius', 'elementor' );
 __( 'Top left', 'elementor' );
@@ -304,3 +325,18 @@ __( 'System', 'elementor' );
 __( 'Custom Fonts', 'elementor' );
 __( 'Google Fonts', 'elementor' );
 __( 'Flex direction', 'elementor' );
+=======
+__( 'Top left', 'elementor' );
+__( 'Top right', 'elementor' );
+__( 'Bottom right', 'elementor' );
+__( 'Bottom left', 'elementor' );
+__( 'Bottom left', 'elementor' );
+__( 'Bottom right', 'elementor' );
+__( 'Adjust corners', 'elementor' );
+__( 'Border color', 'elementor' );
+__( 'Background', 'elementor' );
+__( 'Flex direction', 'elementor' );
+__( 'System', 'elementor' );
+__( 'Custom Fonts', 'elementor' );
+__( 'Google Fonts', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275

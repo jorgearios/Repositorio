@@ -5,16 +5,25 @@ use Elementor\Modules\AtomicWidgets\Controls\Section;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Switch_Control;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Text_Control;
 use Elementor\Modules\AtomicWidgets\DynamicTags\Dynamic_Prop_Type;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Widget_Base;
 use Elementor\Modules\AtomicWidgets\Elements\Base\Has_Template;
+=======
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Widget_Base;
+use Elementor\Modules\AtomicWidgets\Elements\Has_Template;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\AtomicWidgets\PropTypes\Classes_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Attributes_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Primitives\Boolean_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Primitives\String_Prop_Type;
 use Elementor\Modules\AtomicWidgets\Styles\Style_Definition;
 use Elementor\Modules\AtomicWidgets\Styles\Style_Variant;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Loader\Frontend_Assets_Loader;
 use Elementor\Modules\Components\PropTypes\Overridable_Prop_Type;
+=======
+use Elementor\Modules\AtomicWidgets\Loader\Frontend_Assets_Loader;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Utils;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -66,7 +75,11 @@ class Atomic_Youtube extends Atomic_Widget_Base {
 			'privacy_mode' => Boolean_Prop_Type::make()->default( false ),
 			'rel' => Boolean_Prop_Type::make()->default( true ),
 
+<<<<<<< HEAD
 			'attributes' => Attributes_Prop_Type::make()->meta( Overridable_Prop_Type::ignore() ),
+=======
+			'attributes' => Attributes_Prop_Type::make(),
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		];
 	}
 
@@ -117,10 +130,14 @@ class Atomic_Youtube extends Atomic_Widget_Base {
 	}
 
 	public function get_script_depends() {
+<<<<<<< HEAD
 		return array_merge(
 			parent::get_script_depends(),
 			[ 'elementor-youtube-handler' ],
 		);
+=======
+		return [ 'elementor-youtube-handler' ];
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	public function register_frontend_handlers() {

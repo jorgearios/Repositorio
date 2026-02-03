@@ -66,10 +66,15 @@ class Size_Prop_Type extends Object_Prop_Type {
 
 		switch ( $value['unit'] ) {
 			case Size_Constants::UNIT_CUSTOM:
+<<<<<<< HEAD
 				return null !== $value['size'] || 'auto' === $value['size'];
 			case Size_Constants::UNIT_AUTO:
 				// for "auto" - the propType schema does not enforce size to be null, so we manually set it to null here
 				$value['size'] = null;
+=======
+				return null !== $value['size'];
+			case Size_Constants::UNIT_AUTO:
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				return ! $value['size'];
 			default:
 				return (

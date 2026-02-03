@@ -2976,7 +2976,10 @@ body:not(.elementor-device-mobile) .elementor-control.elementor-control-responsi
   --e-p-border-global:	#5EEAD4;
   --e-p-border-global-hover:	#1DDDBF;
   --e-p-border-global-invert:	#0C0D0E;
+<<<<<<< HEAD
   --e-p-border-global-element:	#5EEAD4;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }
 
 .elementor-editor-active .elementor-add-section {
@@ -3825,6 +3828,7 @@ html.elementor-html {
 .elementor-editor-preview .elementor-widget-empty {
   display: none;
 }
+<<<<<<< HEAD
 .elementor-editor-preview :where(.elementor-edit-area-active) .elementor-element-overlay,
 .elementor-editor-preview :where(.elementor-edit-area-active) .elementor-empty,
 .elementor-editor-preview :where(.elementor-edit-area-active) .elementor-empty-view,
@@ -3837,6 +3841,8 @@ html.elementor-html {
 .elementor-editor-preview :where(.elementor-edit-area-active.elementor-widget-e-component) > .elementor-section-wrap > :first-child.elementor-element-editable > .elementor-element-overlay::after {
   outline-offset: -1px;
 }
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 .e-preview--show-hidden-elements[data-elementor-device-mode=widescreen] .elementor-edit-area-active .elementor-hidden-widescreen,
 .e-preview--show-hidden-elements[data-elementor-device-mode=desktop] .elementor-edit-area-active .elementor-hidden-desktop,
@@ -3938,6 +3944,7 @@ html.elementor-html {
   pointer-events: none;
 }
 
+<<<<<<< HEAD
 .elementor-widget-e-component[data-atomic].elementor-edit-area-active > * > * {
   pointer-events: initial;
 }
@@ -3945,6 +3952,8 @@ html.elementor-html {
   pointer-events: none;
 }
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 .elementor-editor-element-overlay-settings {
   height: 24px;
   top: 1px;

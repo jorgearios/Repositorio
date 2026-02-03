@@ -2,6 +2,7 @@
 namespace Elementor\Modules\AtomicWidgets\Elements\Atomic_Heading;
 
 use Elementor\Modules\AtomicWidgets\Controls\Section;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Controls\Types\Inline_Editing_Control;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Link_Control;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Select_Control;
@@ -10,13 +11,29 @@ use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Widget_Base;
 use Elementor\Modules\AtomicWidgets\Elements\Base\Has_Template;
 use Elementor\Modules\AtomicWidgets\PropTypes\Attributes_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Classes_Prop_Type;
+=======
+use Elementor\Modules\AtomicWidgets\Controls\Types\Link_Control;
+use Elementor\Modules\AtomicWidgets\Controls\Types\Select_Control;
+use Elementor\Modules\AtomicWidgets\Controls\Types\Textarea_Control;
+use Elementor\Modules\AtomicWidgets\Controls\Types\Inline_Editing_Control;
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Widget_Base;
+use Elementor\Modules\AtomicWidgets\Elements\Has_Template;
+use Elementor\Modules\AtomicWidgets\Module as Atomic_Widgets_Module;
+use Elementor\Modules\AtomicWidgets\PropTypes\Classes_Prop_Type;
+use Elementor\Modules\AtomicWidgets\PropTypes\Attributes_Prop_Type;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\AtomicWidgets\PropTypes\Html_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Link_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Primitives\String_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Size_Prop_Type;
 use Elementor\Modules\AtomicWidgets\Styles\Style_Definition;
 use Elementor\Modules\AtomicWidgets\Styles\Style_Variant;
+<<<<<<< HEAD
 use Elementor\Modules\Components\PropTypes\Overridable_Prop_Type;
+=======
+use Elementor\Modules\AtomicWidgets\Controls\Types\Text_Control;
+use Elementor\Plugin;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -27,8 +44,11 @@ class Atomic_Heading extends Atomic_Widget_Base {
 
 	const LINK_BASE_STYLE_KEY = 'link-base';
 
+<<<<<<< HEAD
 	public static $widget_description = 'Display a heading with customizable tag, styles, and link options.';
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	public static function get_element_type(): string {
 		return 'e-heading';
 	}
@@ -46,7 +66,17 @@ class Atomic_Heading extends Atomic_Widget_Base {
 	}
 
 	protected static function define_props_schema(): array {
+<<<<<<< HEAD
 		return [
+=======
+		$is_feature_active = Plugin::$instance->experiments->is_feature_active( Atomic_Widgets_Module::EXPERIMENT_INLINE_EDITING );
+
+		$title_prop = $is_feature_active
+			? Html_Prop_Type::make()->default( __( 'This is a title', 'elementor' ) )
+			: String_Prop_Type::make()->default( __( 'This is a title', 'elementor' ) );
+
+		$props = [
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			'classes' => Classes_Prop_Type::make()
 				->default( [] ),
 
@@ -55,12 +85,17 @@ class Atomic_Heading extends Atomic_Widget_Base {
 				->default( 'h2' )
 				->description( 'The HTML tag for the heading element. Could be h1, h2, up to h6' ),
 
+<<<<<<< HEAD
 			'title' => Html_Prop_Type::make()
 				->default( __( 'This is a title', 'elementor' ) )
+=======
+			'title' => $title_prop
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				->description( 'The text content of the heading.' ),
 
 			'link' => Link_Prop_Type::make(),
 
+<<<<<<< HEAD
 			'attributes' => Attributes_Prop_Type::make()->meta( Overridable_Prop_Type::ignore() ),
 		];
 	}
@@ -74,6 +109,28 @@ class Atomic_Heading extends Atomic_Widget_Base {
 					->set_label( __( 'Title', 'elementor' ) ),
 			] );
 
+=======
+			'attributes' => Attributes_Prop_Type::make(),
+		];
+
+		return $props;
+	}
+
+	protected function define_atomic_controls(): array {
+		$is_feature_active = Plugin::$instance->experiments->is_feature_active( Atomic_Widgets_Module::EXPERIMENT_INLINE_EDITING );
+
+		$control = $is_feature_active
+			? Inline_Editing_Control::bind_to( 'title' )
+				->set_placeholder( __( 'Type your title here', 'elementor' ) )
+				->set_label( __( 'Title', 'elementor' ) )
+			: Textarea_Control::bind_to( 'title' )
+				->set_placeholder( __( 'Type your title here', 'elementor' ) )
+				->set_label( __( 'Title', 'elementor' ) );
+
+		$content_section = Section::make()
+			->set_label( __( 'Content', 'elementor' ) )
+			->set_items( [ $control ] );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		return [
 			$content_section,
 			Section::make()

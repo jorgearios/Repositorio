@@ -531,7 +531,11 @@ abstract class Base_App {
 	 *
 	 * @return false|string
 	 */
+<<<<<<< HEAD
 	protected function generate_signature( $payload = [] ) {
+=======
+	private function generate_signature( $payload = [] ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		return hash_hmac(
 			'sha256',
 			wp_json_encode( $payload, JSON_NUMERIC_CHECK ),
@@ -800,7 +804,11 @@ abstract class Base_App {
 		}
 	}
 
+<<<<<<< HEAD
 	protected function get_generated_urls( $endpoint ) {
+=======
+	private function get_generated_urls( $endpoint ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		$base_urls = $this->get_api_url();
 
 		if ( ! is_array( $base_urls ) ) {

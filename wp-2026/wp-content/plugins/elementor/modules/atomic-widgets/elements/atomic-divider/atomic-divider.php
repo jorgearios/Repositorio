@@ -2,8 +2,13 @@
 
 namespace Elementor\Modules\AtomicWidgets\Elements\Atomic_Divider;
 
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Widget_Base;
 use Elementor\Modules\AtomicWidgets\Elements\Base\Has_Template;
+=======
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Widget_Base;
+use Elementor\Modules\AtomicWidgets\Elements\Has_Template;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\AtomicWidgets\PropTypes\Background_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Attributes_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Classes_Prop_Type;
@@ -13,7 +18,10 @@ use Elementor\Modules\AtomicWidgets\Styles\Style_Definition;
 use Elementor\Modules\AtomicWidgets\Styles\Style_Variant;
 use Elementor\Modules\AtomicWidgets\Controls\Section;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Text_Control;
+<<<<<<< HEAD
 use Elementor\Modules\Components\PropTypes\Overridable_Prop_Type;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -51,7 +59,11 @@ class Atomic_Divider extends Atomic_Widget_Base {
 			'classes' => Classes_Prop_Type::make()
 				->default( [] ),
 
+<<<<<<< HEAD
 			'attributes' => Attributes_Prop_Type::make()->meta( Overridable_Prop_Type::ignore() ),
+=======
+			'attributes' => Attributes_Prop_Type::make(),
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		];
 	}
 

@@ -20,6 +20,10 @@ use Elementor\Widget_Base;
 use Elementor\Core\Settings\Page\Manager as PageManager;
 use ElementorPro\Modules\Library\Widgets\Template;
 use Elementor\Core\Utils\Promotions\Filtered_Promotions_Manager;
+<<<<<<< HEAD
+=======
+use Elementor\Modules\AtomicWidgets\Module as Atomic_Widgets_Module;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -609,10 +613,13 @@ abstract class Document extends Controls_Stack {
 		if ( $autosave_id ) {
 			$document = Plugin::$instance->documents->get( $autosave_id );
 		} elseif ( $create ) {
+<<<<<<< HEAD
 			if ( ! function_exists( 'wp_create_post_autosave' ) ) {
 				require_once ABSPATH . 'wp-admin/includes/post.php';
 			}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			$autosave_id = wp_create_post_autosave( [
 				'post_ID' => $this->post->ID,
 				'post_type' => $this->post->post_type,
@@ -1065,6 +1072,7 @@ abstract class Document extends Controls_Stack {
 			$data = $this->get_elements_data();
 		}
 
+<<<<<<< HEAD
 		/**
 		 * Filters document elements data after loading.
 		 *
@@ -1080,6 +1088,8 @@ abstract class Document extends Controls_Stack {
 			$data = apply_filters( 'elementor/document/load/data', $data, $this );
 		}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		// Change the current documents, so widgets can use `documents->get_current` and other post data
 		Plugin::$instance->documents->switch_to_document( $this );
 

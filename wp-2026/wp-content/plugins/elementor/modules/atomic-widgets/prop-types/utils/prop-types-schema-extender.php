@@ -7,7 +7,10 @@ use Elementor\Modules\AtomicWidgets\PropTypes\Union_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Base\Object_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Base\Array_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Contracts\Transformable_Prop_Type;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\PropTypes\Color_Prop_Type;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -30,6 +33,7 @@ abstract class Prop_Types_Schema_Extender {
 		return $result;
 	}
 
+<<<<<<< HEAD
 	public function get_extended_style_schema( array $schema ): array {
 		$result = [];
 
@@ -84,6 +88,8 @@ abstract class Prop_Types_Schema_Extender {
 		return false;
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	protected function get_extended_prop_type( Prop_Type $prop_type ): Prop_Type {
 		if ( ! ( $prop_type instanceof Transformable_Prop_Type || $prop_type instanceof Union_Prop_Type ) ) {
 			return $prop_type;

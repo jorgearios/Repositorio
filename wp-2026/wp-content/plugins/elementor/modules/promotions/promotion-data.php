@@ -24,6 +24,7 @@ class PromotionData {
 		];
 	}
 
+<<<<<<< HEAD
 	public function get_v4_promotions_data( $force_request = false ): array {
 		$assets_data = $this->editor_assets_api->get_assets_data( $force_request );
 
@@ -47,6 +48,8 @@ class PromotionData {
 		return $promotions;
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	private function transform_assets_data( $force_request = false ) {
 		$assets_data = $this->editor_assets_api->get_assets_data( $force_request );
 		$transformed_data = [];

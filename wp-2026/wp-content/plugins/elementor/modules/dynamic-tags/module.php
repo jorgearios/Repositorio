@@ -71,11 +71,14 @@ class Module extends BaseModule {
 	const DATETIME_CATEGORY = 'datetime';
 
 	/**
+<<<<<<< HEAD
 	 * Dynamic tags SVG category.
 	 */
 	const SVG_CATEGORY = 'svg';
 
 	/**
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	 * Dynamic tags module constructor.
 	 *
 	 * Initializing Elementor dynamic tags module.

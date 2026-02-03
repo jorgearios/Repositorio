@@ -23,6 +23,7 @@ __( 'Link %s', 'elementor' );
 // translators: %s: Tooltip title.
 __( 'Unlink %s', 'elementor' );
 __( 'Top', 'elementor' );
+<<<<<<< HEAD
 /* translators: %s is the name of the main group (margin or padding) */
 __( '%s top', 'elementor' );
 __( 'Left', 'elementor' );
@@ -40,6 +41,13 @@ __( 'Left', 'elementor' );
 __( '%s right', 'elementor' );
 /* translators: %s is the name of the main group (margin or padding) */
 __( '%s left', 'elementor' );
+=======
+__( 'Left', 'elementor' );
+__( 'Right', 'elementor' );
+__( 'Bottom', 'elementor' );
+__( 'Right', 'elementor' );
+__( 'Left', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Link', 'elementor' );
 __( 'Toggle link', 'elementor' );
 __( 'Open in a new tab', 'elementor' );
@@ -61,9 +69,13 @@ __( 'Link %s', 'elementor' );
 // translators: %s: Tooltip title.
 __( 'Unlink %s', 'elementor' );
 __( 'Column', 'elementor' );
+<<<<<<< HEAD
 __( 'Column gap', 'elementor' );
 __( 'Row', 'elementor' );
 __( 'Row gap', 'elementor' );
+=======
+__( 'Row', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Mixed', 'elementor' );
 __( 'Box shadow', 'elementor' );
 __( 'Color', 'elementor' );
@@ -76,6 +88,7 @@ __( 'Blur', 'elementor' );
 __( 'Spread', 'elementor' );
 __( 'Auto', 'elementor' );
 __( 'Custom', 'elementor' );
+<<<<<<< HEAD
 __( 'Type a URL', 'elementor' );
 __( 'Open in a new tab', 'elementor' );
 __( 'Open in a new tab', 'elementor' );
@@ -89,6 +102,15 @@ __(
 		'To add a link or action to this container, first remove the link or action from its parent container.',
 		'elementor'
 	);
+=======
+__( 'CSS function', 'elementor' );
+__( 'Learn More', 'elementor' );
+__(
+		'To add a link to this element, first remove the link from the elements inside of it.',
+		'elementor'
+	);
+__( 'To add a link to this element, first remove the link from its parent container.', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Take me there', 'elementor' );
 __( 'Nested links', 'elementor' );
 __( 'Search', 'elementor' );
@@ -102,7 +124,10 @@ __( 'Underline', 'elementor' );
 __( 'Strikethrough', 'elementor' );
 __( 'Superscript', 'elementor' );
 __( 'Subscript', 'elementor' );
+<<<<<<< HEAD
 __( 'Link', 'elementor' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Enable Unfiltered Uploads', 'elementor' );
 __(
 	'Before you enable unfiltered files upload, note that such files include a security risk. Elementor does run a process to remove possible malicious code, but there is still risk involved when using such files.',
@@ -117,8 +142,11 @@ __( 'Cancel', 'elementor' );
 __( 'Enable', 'elementor' );
 __( 'Recently Used', 'elementor' );
 __( 'Transition Property', 'elementor' );
+<<<<<<< HEAD
 __( 'Upgrade to customize transition properties and control effects.', 'elementor' );
 __( 'Upgrade now', 'elementor' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Type', 'elementor' );
 __( 'Duration', 'elementor' );
 __( 'Transitions', 'elementor' );
@@ -129,6 +157,7 @@ __( 'Empty Transition', 'elementor' );
 __( 'All properties', 'elementor' );
 __( 'Default', 'elementor' );
 __( 'All properties', 'elementor' );
+<<<<<<< HEAD
 __( 'Margin', 'elementor' );
 __( 'Margin (all)', 'elementor' );
 __( 'Margin bottom', 'elementor' );
@@ -186,6 +215,8 @@ __( 'Effects', 'elementor' );
 __( 'Opacity', 'elementor' );
 __( 'Transform (all)', 'elementor' );
 __( 'Filter (all)', 'elementor' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Transform settings', 'elementor' );
 __( 'You can use each kind of transform only once per element.', 'elementor' );
 __( 'Transform', 'elementor' );
@@ -229,7 +260,10 @@ __( 'Show', 'elementor' );
 __( 'Hide', 'elementor' );
 __( 'Remove', 'elementor' );
 __( 'Open item', 'elementor' );
+<<<<<<< HEAD
 __( 'Display Conditions', 'elementor' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Origin X', 'elementor' );
 __( 'Origin Y', 'elementor' );
 __( 'Origin Z', 'elementor' );

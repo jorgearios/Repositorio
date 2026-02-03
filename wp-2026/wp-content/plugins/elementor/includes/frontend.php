@@ -693,11 +693,14 @@ class Frontend extends App {
 					$css_file = Post_CSS::create( get_the_ID() );
 					$css_file->enqueue();
 				}
+<<<<<<< HEAD
 			} else {
 				$post_id = Plugin::$instance->preview->get_post_id();
 				if ( $post_id ) {
 					do_action( 'elementor/post/render', $post_id );
 				}
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			}
 
 			do_action( 'elementor/frontend/after_enqueue_post_styles' );

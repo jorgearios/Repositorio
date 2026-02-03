@@ -42,8 +42,11 @@
 
 /*! ../global-classes-styles-provider */
 
+<<<<<<< HEAD
 /*! ../save-global-classes */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../search-and-filter/components/filter/active-filters */
 
 /*! ../search-and-filter/components/filter/css-class-filter */
@@ -112,10 +115,13 @@
 
 /*! ./mcp-integration */
 
+<<<<<<< HEAD
 /*! ./mcp-integration/classes-resource */
 
 /*! ./mcp-manage-global-classes */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./not-found */
 
 /*! ./panel-interactions */
@@ -142,8 +148,11 @@
 
 /*! @elementor/editor */
 
+<<<<<<< HEAD
 /*! @elementor/editor-canvas */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! @elementor/editor-current-user */
 
 /*! @elementor/editor-documents */
@@ -154,8 +163,11 @@
 
 /*! @elementor/editor-panels */
 
+<<<<<<< HEAD
 /*! @elementor/editor-props */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! @elementor/editor-styles */
 
 /*! @elementor/editor-styles-repository */
@@ -236,6 +248,7 @@
   !*** external ["elementorV2","httpClient"] ***!
   \*********************************************/
 
+<<<<<<< HEAD
 /*!**********************************************!*\
   !*** external ["elementorV2","editorProps"] ***!
   \**********************************************/
@@ -244,6 +257,8 @@
   !*** external ["elementorV2","editorCanvas"] ***!
   \***********************************************/
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!***********************************************!*\
   !*** external ["elementorV2","editorPanels"] ***!
   \***********************************************/
@@ -400,10 +415,13 @@
   !*** ./packages/packages/core/editor-global-classes/src/components/search-and-filter/context.tsx ***!
   \***************************************************************************************************/
 
+<<<<<<< HEAD
 /*!*******************************************************************************************************!*\
   !*** ./packages/packages/core/editor-global-classes/src/mcp-integration/mcp-manage-global-classes.ts ***!
   \*******************************************************************************************************/
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!*********************************************************************************************************!*\
   !*** ./packages/packages/core/editor-global-classes/src/components/class-manager/panel-interactions.ts ***!
   \*********************************************************************************************************/

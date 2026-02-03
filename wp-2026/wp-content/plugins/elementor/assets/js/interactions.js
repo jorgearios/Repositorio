@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports.config = void 0;
+<<<<<<< HEAD
 exports.extractAnimationId = extractAnimationId;
 exports.extractInteractionId = extractInteractionId;
 exports.getAnimateFunction = getAnimateFunction;
@@ -23,6 +24,10 @@ exports.getKeyframes = getKeyframes;
 exports.parseAnimationName = parseAnimationName;
 exports.parseInteractionsData = parseInteractionsData;
 exports.waitForAnimateFunction = waitForAnimateFunction;
+=======
+exports.getKeyframes = getKeyframes;
+exports.parseAnimationName = parseAnimationName;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
 var _window$ElementorInte;
 var config = exports.config = ((_window$ElementorInte = window.ElementorInteractionsConfig) === null || _window$ElementorInte === void 0 ? void 0 : _window$ElementorInte.constants) || {
@@ -30,6 +35,7 @@ var config = exports.config = ((_window$ElementorInte = window.ElementorInteract
   defaultDelay: 0,
   slideDistance: 100,
   scaleStart: 0,
+<<<<<<< HEAD
   ease: 'easeIn'
 };
 function getKeyframes(effect, type, direction) {
@@ -37,12 +43,54 @@ function getKeyframes(effect, type, direction) {
   var keyframes = {};
   if ('fade' === effect) {
     keyframes.opacity = isIn ? [0, 1] : [1, 0];
+=======
+  easing: 'linear'
+};
+function calculateSlideDistance(element, direction) {
+  if (!element) {
+    return config.slideDistance;
+  }
+  var rect = element.getBoundingClientRect();
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  var isLtr = 'ltr' === document.documentElement.dir || 'ltr' === document.body.dir;
+  switch (direction) {
+    case 'left':
+      return Math.min((isLtr ? rect.left : rect.right) + rect.width, viewportWidth + rect.width);
+    case 'right':
+      return Math.min(viewportWidth - (isLtr ? rect.right : rect.left) + rect.width, viewportWidth + rect.width);
+    case 'top':
+      return Math.min(rect.top + rect.height, viewportHeight + rect.height);
+    case 'bottom':
+      return Math.min(viewportHeight - rect.bottom + rect.height, viewportHeight + rect.height);
+    default:
+      return config.slideDistance;
+  }
+}
+function getKeyframes(effect, type, direction) {
+  var element = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+  var isIn = 'in' === type;
+  var keyframes = {};
+  var hasDirection = !!direction;
+  if ('fade' === effect) {
+    if (hasDirection && isIn) {
+      keyframes.opacity = [0, 0, 0.2, 0.6, 1];
+    } else if (hasDirection && !isIn) {
+      keyframes.opacity = [1, 0.8, 0.4, 0, 0];
+    } else {
+      keyframes.opacity = isIn ? [0, 1] : [1, 0];
+    }
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   }
   if ('scale' === effect) {
     keyframes.scale = isIn ? [config.scaleStart, 1] : [1, config.scaleStart];
   }
   if (direction) {
+<<<<<<< HEAD
     var distance = config.slideDistance;
+=======
+    var distance = calculateSlideDistance(element, direction);
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     var movement = {
       left: {
         x: isIn ? [-distance, 0] : [0, -distance]
@@ -79,6 +127,7 @@ function parseAnimationName(name) {
     delay: delay ? parseInt(delay, 10) : config.defaultDelay
   };
 }
+<<<<<<< HEAD
 function extractAnimationId(interaction) {
   var _interaction$animatio;
   if ('string' === typeof interaction) {
@@ -146,6 +195,8 @@ function parseInteractionsData(data) {
   }
   return data;
 }
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 /***/ }),
 
@@ -319,7 +370,11 @@ function scrollOutAnimation(element, transition, animConfig, keyframes, options,
     amount: 0.85,
     root: null
   };
+<<<<<<< HEAD
   var resetKeyframes = (0, _interactionsUtils.getKeyframes)(animConfig.effect, 'in', animConfig.direction);
+=======
+  var resetKeyframes = (0, _interactionsUtils.getKeyframes)(animConfig.effect, 'in', animConfig.direction, element);
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   animateFunc(element, resetKeyframes, {
     duration: 0
   });
@@ -354,11 +409,19 @@ function defaultAnimation(element, transition, keyframes, options, animateFunc) 
   });
 }
 function applyAnimation(element, animConfig, animateFunc, inViewFunc) {
+<<<<<<< HEAD
   var keyframes = (0, _interactionsUtils.getKeyframes)(animConfig.effect, animConfig.type, animConfig.direction);
   var options = {
     duration: animConfig.duration / 1000,
     delay: animConfig.delay / 1000,
     ease: _interactionsUtils.config.ease
+=======
+  var keyframes = (0, _interactionsUtils.getKeyframes)(animConfig.effect, animConfig.type, animConfig.direction, element);
+  var options = {
+    duration: animConfig.duration / 1000,
+    delay: animConfig.delay / 1000,
+    easing: _interactionsUtils.config.easing
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   };
 
   // WHY - Transition can be set on elements but once it sets it destroys all animations, so we basically put it aside.
@@ -373,6 +436,7 @@ function applyAnimation(element, animConfig, animateFunc, inViewFunc) {
   }
 }
 function initInteractions() {
+<<<<<<< HEAD
   (0, _interactionsUtils.waitForAnimateFunction)(function () {
     var animateFunc = (0, _interactionsUtils.getAnimateFunction)();
     var inViewFunc = (0, _interactionsUtils.getInViewFunction)();
@@ -393,6 +457,34 @@ function initInteractions() {
           applyAnimation(element, animConfig, animateFunc, inViewFunc);
         }
       });
+=======
+  var _window$Motion, _window$Motion2, _window$Motion3;
+  if ('undefined' === typeof animate && !((_window$Motion = window.Motion) !== null && _window$Motion !== void 0 && _window$Motion.animate)) {
+    setTimeout(initInteractions, 100);
+    return;
+  }
+  var animateFunc = 'undefined' !== typeof animate ? animate : (_window$Motion2 = window.Motion) === null || _window$Motion2 === void 0 ? void 0 : _window$Motion2.animate;
+  var inViewFunc = 'undefined' !== typeof inView ? inView : (_window$Motion3 = window.Motion) === null || _window$Motion3 === void 0 ? void 0 : _window$Motion3.inView;
+  if (!inViewFunc || !animateFunc) {
+    return;
+  }
+  var elements = document.querySelectorAll('[data-interactions]');
+  elements.forEach(function (element) {
+    var interactionsData = element.getAttribute('data-interactions');
+    var interactions = [];
+    try {
+      interactions = JSON.parse(interactionsData);
+    } catch (error) {
+      return;
+    }
+    interactions.forEach(function (interaction) {
+      var _interaction$animatio;
+      var animationName = 'string' === typeof interaction ? interaction : interaction === null || interaction === void 0 || (_interaction$animatio = interaction.animation) === null || _interaction$animatio === void 0 ? void 0 : _interaction$animatio.animation_id;
+      var animConfig = animationName && (0, _interactionsUtils.parseAnimationName)(animationName);
+      if (animConfig) {
+        applyAnimation(element, animConfig, animateFunc, inViewFunc);
+      }
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     });
   });
 }

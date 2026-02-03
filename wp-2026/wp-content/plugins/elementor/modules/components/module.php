@@ -9,11 +9,16 @@ use Elementor\Modules\Components\Documents\Component as Component_Document;
 use Elementor\Modules\Components\Component_Lock_Manager;
 use Elementor\Modules\Components\PropTypes\Component_Instance_Prop_Type;
 use Elementor\Modules\Components\Transformers\Component_Instance_Transformer;
+<<<<<<< HEAD
 use Elementor\Modules\Components\PropTypes\Overridable_Prop_Type;
 use Elementor\Modules\Components\Transformers\Overridable_Transformer;
 use Elementor\Core\Base\Document;
 use Elementor\Modules\Components\PropTypes\Override_Prop_Type;
 use Elementor\Modules\Components\Transformers\Override_Transformer;
+=======
+use Elementor\Modules\Components\PropTypes\Component_Overridable_Prop_Type;
+use Elementor\Modules\Components\Transformers\Component_Overridable_Transformer;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -34,11 +39,16 @@ class Module extends BaseModule {
 
 		add_filter( 'elementor/editor/v2/packages', fn ( $packages ) => $this->add_packages( $packages ) );
 		add_filter( 'elementor/atomic-widgets/props-schema', fn ( $schema ) => $this->modify_props_schema( $schema ) );
+<<<<<<< HEAD
 		add_action( 'elementor/documents/register', fn ( $documents_manager ) => $this->register_document_type( $documents_manager ) );
 		add_action( 'elementor/document/before_save', fn( Document $document, array $data ) => $this->validate_circular_dependencies( $document, $data ), 10, 2 );
 		add_action( 'elementor/document/after_save', fn( Document $document, array $data ) => $this->set_component_overridable_props( $document, $data ), 10, 2 );
 		add_filter( 'elementor/global_classes/additional_post_types', fn( $post_types ) => array_merge( $post_types, [ Component_Document::TYPE ] ) );
 
+=======
+
+		add_action( 'elementor/documents/register', fn ( $documents_manager ) => $this->register_document_type( $documents_manager ) );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		add_action( 'elementor/atomic-widgets/settings/transformers/register', fn ( $transformers ) => $this->register_settings_transformers( $transformers ) );
 
 		( Component_Lock_Manager::get_instance()->register_hooks() );
@@ -52,8 +62,13 @@ class Module extends BaseModule {
 			'title'          => esc_html__( 'Components', 'elementor' ),
 			'description'    => esc_html__( 'Enable components.', 'elementor' ),
 			'hidden'         => true,
+<<<<<<< HEAD
 			'default'        => Experiments_Manager::STATE_ACTIVE,
 			'release_status' => Experiments_Manager::RELEASE_STATUS_BETA,
+=======
+			'default'        => Experiments_Manager::STATE_INACTIVE,
+			'release_status' => Experiments_Manager::RELEASE_STATUS_DEV,
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		];
 	}
 
@@ -68,7 +83,11 @@ class Module extends BaseModule {
 	}
 
 	private function modify_props_schema( array $schema ) {
+<<<<<<< HEAD
 		return Overridable_Schema_Extender::make()->get_extended_schema( $schema );
+=======
+		return Component_Overridable_Schema_Extender::make()->get_extended_schema( $schema );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	private function register_component_post_type() {
@@ -87,6 +106,7 @@ class Module extends BaseModule {
 		);
 	}
 
+<<<<<<< HEAD
 	private function validate_circular_dependencies( Document $document, array $data ) {
 		if ( ! $document instanceof Component_Document ) {
 			return;
@@ -128,5 +148,10 @@ class Module extends BaseModule {
 		$transformers->register( Component_Instance_Prop_Type::get_key(), new Component_Instance_Transformer() );
 		$transformers->register( Overridable_Prop_Type::get_key(), new Overridable_Transformer() );
 		$transformers->register( Override_Prop_Type::get_key(), new Override_Transformer() );
+=======
+	private function register_settings_transformers( Transformers_Registry $transformers ) {
+		$transformers->register( Component_Instance_Prop_Type::get_key(), new Component_Instance_Transformer() );
+		$transformers->register( Component_Overridable_Prop_Type::get_key(), new Component_Overridable_Transformer() );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 }

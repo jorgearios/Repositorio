@@ -842,11 +842,15 @@ var eventsConfig = {
       createCancelled: 'component_creation_cancelled',
       created: 'component_created',
       instanceAdded: 'component_instance_added',
+<<<<<<< HEAD
       edited: 'component_edited',
       propertiesPanelOpened: 'component_properties_panel_opened',
       propertiesGroupCreated: 'component_properties_group_created',
       propertyExposed: 'component_property_exposed',
       propertyRemoved: 'component_property_removed'
+=======
+      edited: 'component_edited'
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     },
     global_classes: {
       classApplied: 'class_applied',

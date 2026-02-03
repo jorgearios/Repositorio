@@ -3,6 +3,7 @@
 # Las directivas (líneas) entre "BEGIN WordPress" y "END WordPress" son
 # generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
 # Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<<<<<<< HEAD
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -12,5 +13,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /2026/wp-2026/index.php [L]
 </IfModule>
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 # END WordPress

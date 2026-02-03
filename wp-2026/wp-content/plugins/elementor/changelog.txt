@@ -1,5 +1,6 @@
 == Changelog ==
 
+<<<<<<< HEAD
 = 3.35.0 - 2026-02-02 =
 
 * New: Introducing Components - reusable layout building blocks with global sync and per-instance content overrides - Editor V4
@@ -16,6 +17,8 @@
 * Fix: Flex and Div blocks lose selection when deleting an assigned class via the Class Manager - Editor V4
 * Fix: Container handles not visible when "Overflow: Hidden" is enabled
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 = 3.34.4 - 2026-01-29 =
 
 * Tweak: Updated import and export flow for Website Templates

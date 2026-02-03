@@ -50,6 +50,7 @@ class Parser {
 		}
 
 		foreach ( $interactions['items'] as &$interaction ) {
+<<<<<<< HEAD
 			if ( ! isset( $interaction['$$type'] ) || 'interaction-item' !== $interaction['$$type'] ) {
 				continue;
 			}
@@ -71,16 +72,27 @@ class Parser {
 					'$$type' => 'string',
 					'value' => $this->get_next_interaction_id( $element_id ),
 				];
+=======
+			if ( array_key_exists( 'interaction_id', $interaction ) ) {
+				$this->ids_lookup[] = $interaction['interaction_id'];
+			} else {
+				$interaction = array_merge( [
+					'interaction_id' => $this->get_next_interaction_id( $element_id ),
+				], $interaction );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			}
 		}
 
 		return wp_json_encode( $interactions );
 	}
 
+<<<<<<< HEAD
 	private function is_temp_id( $id ) {
 		return is_string( $id ) && strpos( $id, 'temp-' ) === 0;
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	private function decode_interactions( $interactions ) {
 		if ( is_array( $interactions ) ) {
 			return $interactions;

@@ -3,9 +3,15 @@
 namespace Elementor\Modules\Components;
 
 use Elementor\Core\Utils\Collection;
+<<<<<<< HEAD
 use Elementor\Modules\Components\Documents\Component as Component_Document;
 use Elementor\Plugin;
 use Elementor\Core\Base\Document;
+=======
+use Elementor\Modules\Components\Documents\Component;
+use Elementor\Modules\Components\Documents\Component as Component_Document;
+use Elementor\Plugin;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -17,8 +23,13 @@ class Components_Repository {
 		return new self();
 	}
 
+<<<<<<< HEAD
 	public function all(): Collection {
 		// Components count is limited to 100, if we increase this number, we need to iterate the posts in batches.
+=======
+	public function all() {
+		// Components count is limited to 50, if we increase this number, we need to iterate the posts in batches.
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		$posts = get_posts( [
 			'post_type' => Component_Document::TYPE,
 			'post_status' => 'any',
@@ -28,37 +39,61 @@ class Components_Repository {
 		$components = [];
 
 		foreach ( $posts as $post ) {
+<<<<<<< HEAD
 			$component = $this->get( $post->ID );
 
 			if ( ! $component ) {
+=======
+			$doc = Plugin::$instance->documents->get( $post->ID );
+
+			if ( ! $doc || ! $doc instanceof Component_Document ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				continue;
 			}
 
 			$components[] = [
+<<<<<<< HEAD
 				'id' => $component->get_main_id(),
 				'title' => $component->get_post()->post_title,
 				'uid' => $component->get_component_uid(),
 				'is_archived' => $component->get_is_archived(),
 				'styles' => $this->extract_styles( $component->get_elements_data() ),
+=======
+				'id' => $doc->get_main_id(),
+				'title' => $doc->get_post()->post_title,
+				'uid' => $doc->get_component_uid(),
+				'styles' => $this->extract_styles( $doc->get_elements_data() ),
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			];
 		}
 
 		return Collection::make( $components );
 	}
 
+<<<<<<< HEAD
 	public function get( $id, bool $include_autosave = true ) {
 		$doc = $include_autosave
 			? Plugin::$instance->documents->get_doc_or_auto_save( $id, get_current_user_id() )
 			: Plugin::$instance->documents->get( $id );
 
 		if ( ! $doc instanceof Component_Document ) {
+=======
+	public function get( $id ) {
+		$doc = Plugin::$instance->documents->get( $id );
+
+		if ( ! $doc instanceof Component ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			return null;
 		}
 
 		return $doc;
 	}
 
+<<<<<<< HEAD
 	public function create( string $title, array $content, string $status, string $uid, array $settings = [] ) {
+=======
+	public function create( string $title, array $content, string $status, string $uid ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		$document = Plugin::$instance->documents->create(
 			Component_Document::get_type(),
 			[
@@ -70,6 +105,7 @@ class Components_Repository {
 			]
 		);
 
+<<<<<<< HEAD
 		try {
 			$saved = $document->save( [
 				'elements' => $content,
@@ -82,6 +118,13 @@ class Components_Repository {
 
 		if ( ! $saved ) {
 			$document->force_delete();
+=======
+		$saved = $document->save( [
+			'elements' => $content,
+		] );
+
+		if ( ! $saved ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			throw new \Exception( 'Failed to create component' );
 		}
 
@@ -100,6 +143,7 @@ class Components_Repository {
 
 		return $styles;
 	}
+<<<<<<< HEAD
 
 	public function archive( array $ids, string $status ) {
 		$failed_ids = [];
@@ -210,4 +254,6 @@ class Components_Repository {
 			],
 		] );
 	}
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }

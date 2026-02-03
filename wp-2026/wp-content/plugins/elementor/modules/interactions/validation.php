@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Validation {
+<<<<<<< HEAD
 	private $elements_to_interactions_counter = [];
 	private $max_number_of_interactions = 5;
 
@@ -14,6 +15,15 @@ class Validation {
 	private const VALID_EFFECTS = [ 'fade', 'slide', 'scale' ];
 	private const VALID_TYPES = [ 'in', 'out' ];
 	private const VALID_DIRECTIONS = [ '', 'left', 'right', 'top', 'bottom' ];
+=======
+	private $valid_ids = [];
+	private $elements_to_interactions_counter = [];
+	private $max_number_of_interactions = 5;
+
+	public function __construct( Presets $presets ) {
+		$this->valid_ids = array_column( $presets->list(), 'value' );
+	}
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 	public function sanitize( $document ) {
 		return $this->sanitize_document_data( $document );
@@ -24,7 +34,11 @@ class Validation {
 			if ( $number_of_interactions > $this->max_number_of_interactions ) {
 				throw new \Exception(
 					sprintf(
+<<<<<<< HEAD
 						// translators: %1$s: element ID, %2$d: maximum number of interactions allowed.
+=======
+						// translators: %1 is the element ID and %2 is the maximum number of interactions
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 						esc_html__( 'Element %1$s has more than %2$d interactions', 'elementor' ),
 						esc_html( $element_id ),
 						esc_html( $this->max_number_of_interactions )
@@ -96,7 +110,19 @@ class Validation {
 		$list_of_interactions = $this->decode_interactions( $interactions );
 
 		foreach ( $list_of_interactions as $interaction ) {
+<<<<<<< HEAD
 			if ( $this->is_valid_interaction_item( $interaction ) ) {
+=======
+			$animation_id = null;
+
+			if ( is_string( $interaction ) ) {
+				$animation_id = $interaction;
+			} elseif ( is_array( $interaction ) && isset( $interaction['animation']['animation_id'] ) ) {
+				$animation_id = $interaction['animation']['animation_id'];
+			}
+
+			if ( $animation_id && $this->is_valid_animation_id( $animation_id ) ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				$sanitized['items'][] = $interaction;
 				$this->increment_interactions_counter_for( $element_id );
 			}
@@ -109,6 +135,7 @@ class Validation {
 		return wp_json_encode( $sanitized );
 	}
 
+<<<<<<< HEAD
 	private function is_valid_interaction_item( $item ) {
 		if ( ! is_array( $item ) ) {
 			return false;
@@ -325,5 +352,19 @@ class Validation {
 		}
 
 		return true;
+=======
+	private function is_valid_animation_id( $animation_id ) {
+		if ( ! is_string( $animation_id ) || empty( $animation_id ) ) {
+			return false;
+		}
+
+		$sanitized_id = sanitize_text_field( $animation_id );
+
+		if ( $sanitized_id !== $animation_id ) {
+			return false;
+		}
+
+		return in_array( $animation_id, $this->valid_ids, true );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 }

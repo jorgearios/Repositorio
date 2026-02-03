@@ -172,7 +172,10 @@ __( 'AI', 'elementor' );
 __( 'Beta', 'elementor' );
 __( 'Close', 'elementor' );
 __( 'Not Now', 'elementor' );
+<<<<<<< HEAD
 __( 'AI Variation from library', 'elementor' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Step into the future with Elementor AI', 'elementor' );
 __( 'Create smarter with AI text and code generators built right into the editor.', 'elementor' );
 __( 'I approve the ', 'elementor' );
@@ -224,6 +227,10 @@ __( ' of the Elementor AI service. ', 'elementor' );
 __( 'This includes consenting to the collection and use of data to improve user experience.', 'elementor' );
 __( 'Get Started', 'elementor' );
 __( 'Connect', 'elementor' );
+<<<<<<< HEAD
+=======
+__( 'AI Variation from library', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'things', 'elementor' );
 __( 'texts', 'elementor' );
 __( 'code', 'elementor' );

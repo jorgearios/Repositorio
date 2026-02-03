@@ -2,12 +2,18 @@
 
 namespace Elementor\Modules\AtomicWidgets\PropsResolver;
 
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\DynamicTags\Dynamic_Prop_Type;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\AtomicWidgets\PropTypes\Base\Array_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Base\Object_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Contracts\Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Union_Prop_Type;
+<<<<<<< HEAD
 use Elementor\Plugin;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Exception;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -41,11 +47,16 @@ class Render_Props_Resolver extends Props_Resolver {
 				continue;
 			}
 
+<<<<<<< HEAD
 			$prop_value = $props[ $key ] ?? null;
 			$actual_value = $this->get_validated_value( $prop_type, $prop_value );
 
 			$transformed = $this->resolve_item(
 				$actual_value,
+=======
+			$transformed = $this->resolve_item(
+				$props[ $key ] ?? $prop_type->get_default(),
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				$key,
 				$prop_type
 			);
@@ -83,6 +94,7 @@ class Render_Props_Resolver extends Props_Resolver {
 
 		return $this->resolve_item( $transformed, $key, $prop_type, $depth + 1 );
 	}
+<<<<<<< HEAD
 
 	private function get_validated_value( Prop_Type $prop_type, $prop_value ) {
 		$default = $prop_type->get_default() ?? null;
@@ -100,4 +112,6 @@ class Render_Props_Resolver extends Props_Resolver {
 
 		return ! $tag ? $default : $prop_value;
 	}
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }

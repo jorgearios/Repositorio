@@ -36,6 +36,7 @@
         },
         {
             "name": "elementor/wp-one-package",
+<<<<<<< HEAD
             "version": "1.0.48",
             "version_normalized": "1.0.48.0",
             "source": {
@@ -47,6 +48,19 @@
                 "type": "zip",
                 "url": "https://composer.elementor.com/download/elementor/wp-one-package/1.0.48",
                 "reference": "6fba587dcdb214de923dc91eedf9eec9286ebe90",
+=======
+            "version": "1.0.47",
+            "version_normalized": "1.0.47.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:elementor/wp-one-package.git",
+                "reference": "79b558c889e20b2dfd7aaff33ddf902746a9aac8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://composer.elementor.com/download/elementor/wp-one-package/1.0.47",
+                "reference": "79b558c889e20b2dfd7aaff33ddf902746a9aac8",
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
                 "shasum": ""
             },
             "require": {
@@ -60,7 +74,11 @@
                 "wp-coding-standards/wpcs": "^3.1.0",
                 "yoast/phpunit-polyfills": "^2.0"
             },
+<<<<<<< HEAD
             "time": "2026-01-29T17:06:07+00:00",
+=======
+            "time": "2026-01-28T11:16:24+00:00",
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -77,7 +95,11 @@
                 ]
             },
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/elementor/wp-one-package/tree/1.0.48"
+=======
+                "source": "https://github.com/elementor/wp-one-package/tree/1.0.47"
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
             },
             "install-path": "../elementor/wp-one-package"
         }

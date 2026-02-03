@@ -38,6 +38,11 @@ __(
 			  );
 __( 'Delete this class?', 'elementor' );
 __( 'Deleting', 'elementor' );
+<<<<<<< HEAD
+=======
+__( 'Not now', 'elementor' );
+__( 'Delete', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Class Manager', 'elementor' );
 __( 'Save changes', 'elementor' );
 __( 'You have unsaved changes', 'elementor' );
@@ -76,11 +81,19 @@ __( 'Popup', 'elementor' );
 __( 'Header', 'elementor' );
 __( 'Footer', 'elementor' );
 __( 'Locator', 'elementor' );
+<<<<<<< HEAD
 __( 'Search', 'elementor' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Unused', 'elementor' );
 __( 'Empty', 'elementor' );
 __( 'On this page', 'elementor' );
 __( 'Filters', 'elementor' );
 __( 'Clear all', 'elementor' );
 __( 'Filters', 'elementor' );
+<<<<<<< HEAD
 __( 'Clear Filters', 'elementor' );
+=======
+__( 'Clear Filters', 'elementor' );
+__( 'Search', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275

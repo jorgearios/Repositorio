@@ -13,7 +13,11 @@ class Presets {
 	const DEFAULT_SCALE_START = 0;
 	const DEFAULT_EASING = 'linear';
 
+<<<<<<< HEAD
 	const TRIGGERS = [ 'load', 'scrollIn', 'scrollOn' ]; // 'scrollOut' is not supported yet.
+=======
+	const TRIGGERS = [ 'load', 'scrollIn' ]; // 'scrollOut' is not supported yet.
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	const EFFECTS = [ 'fade', 'slide', 'scale' ];
 	const TYPES = [ 'in', 'out' ];
 	const DIRECTIONS = [ 'left', 'right', 'top', 'bottom' ];

@@ -179,7 +179,11 @@ var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 var _ui = __webpack_require__(/*! @elementor/ui */ "@elementor/ui");
 var _i18n = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 var popoverData = {
+<<<<<<< HEAD
   image: 'https://assets.elementor.com/v4-promotion/v1/images/v4_chip_new.png',
+=======
+  image: 'https://assets.elementor.com/v4-promotion/v1/images/v4_chip.png',
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   image_alt: (0, _i18n.__)('Atomic Elements', 'elementor'),
   title: (0, _i18n.__)('Atomic Elements', 'elementor'),
   description: [(0, _i18n.__)('The new Atomic Elements are part of version 4, which is now in beta and ready for you to use in production.', 'elementor')],

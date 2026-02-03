@@ -4,8 +4,13 @@ namespace Elementor\Modules\GlobalClasses;
 
 use Elementor\Core\Base\Document;
 use Elementor\Core\Utils\Collection;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Element_Base;
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Widget_Base;
+=======
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Element_Base;
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Widget_Base;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\GlobalClasses\Utils\Atomic_Elements_Utils;
 use Elementor\Plugin;
 
@@ -26,6 +31,7 @@ class Global_Classes_Cleanup {
 
 	private function on_classes_update( $new_value, $prev_value ) {
 		$deleted_classes_ids = $this->get_deleted_classes_ids( $new_value, $prev_value );
+<<<<<<< HEAD
 		$additional_post_types = apply_filters( 'elementor/global_classes/additional_post_types', [] );
 
 		if ( ! empty( $deleted_classes_ids ) ) {
@@ -33,6 +39,12 @@ class Global_Classes_Cleanup {
 				fn( $document, $elements_data ) => $this->unapply_deleted_classes( $document, $elements_data, $deleted_classes_ids ),
 				100,
 				$additional_post_types
+=======
+
+		if ( ! empty( $deleted_classes_ids ) ) {
+			Plugin::$instance->db->iterate_elementor_documents(
+				fn( $document, $elements_data ) => $this->unapply_deleted_classes( $document, $elements_data, $deleted_classes_ids )
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			);
 		}
 	}

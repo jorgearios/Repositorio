@@ -15,6 +15,11 @@ class Props_Resolver_Context {
 
 	private bool $disabled = false;
 
+<<<<<<< HEAD
+=======
+	private ?Transformers_Registry $transformers_registry = null;
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	public static function make(): self {
 		return new static();
 	}
@@ -48,4 +53,21 @@ class Props_Resolver_Context {
 	public function get_prop_type(): ?Transformable_Prop_Type {
 		return $this->prop_type;
 	}
+<<<<<<< HEAD
+=======
+
+	public function set_transformers_registry( Transformers_Registry $transformers_registry ): self {
+		$this->transformers_registry = $transformers_registry;
+
+		return $this;
+	}
+
+	public function get_transformer( string $prop_type_key ): ?Transformer_Base {
+		if ( ! isset( $this->transformers_registry ) ) {
+			return null;
+		}
+
+		return $this->transformers_registry->get( $prop_type_key );
+	}
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }

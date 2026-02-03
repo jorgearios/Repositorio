@@ -26770,7 +26770,11 @@ var Save = exports.Save = /*#__PURE__*/function (_$e$modules$CommandIn) {
       var _apply = (0, _asyncToGenerator2.default)(/*#__PURE__*/_regenerator.default.mark(function _callee(args) {
         var _elementorCommon$conf,
           _this = this;
+<<<<<<< HEAD
         var _args$status, status, _args$force, force, _args$onSuccess, onSuccess, _args$document, document, container, _elementorCommon$__be, _elementorCommon, settings, oldStatus, elements, successArgs, deferred;
+=======
+        var _args$status, status, _args$force, force, _args$onSuccess, onSuccess, _args$document, document, container, settings, oldStatus, _elementorCommon$__be, _elementorCommon, elements, successArgs, deferred;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
         return _regenerator.default.wrap(function (_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
@@ -26781,7 +26785,20 @@ var Save = exports.Save = /*#__PURE__*/function (_$e$modules$CommandIn) {
               }
               return _context.abrupt("return", jQuery.Deferred().reject('Document already in save progress'));
             case 1:
+<<<<<<< HEAD
               container = document.container;
+=======
+              container = document.container, settings = container.settings.toJSON({
+                remove: ['default']
+              }), oldStatus = container.settings.get('post_status');
+              this.addPersistentSettingsToPayload(settings, container);
+
+              // TODO: Remove - Backwards compatibility.
+              elementor.saver.trigger('before:save', args).trigger('before:save:' + status, args);
+              document.editor.isSaving = true;
+              document.editor.isChangedDuringSave = false;
+              settings.post_status = status;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
               if (!((_elementorCommon$conf = elementorCommon.config.experimentalFeatures) !== null && _elementorCommon$conf !== void 0 && _elementorCommon$conf.e_components)) {
                 _context.next = 2;
                 break;
@@ -26792,6 +26809,7 @@ var Save = exports.Save = /*#__PURE__*/function (_$e$modules$CommandIn) {
                 status: status
               });
             case 2:
+<<<<<<< HEAD
               settings = container.settings.toJSON({
                 remove: ['default']
               });
@@ -26803,6 +26821,8 @@ var Save = exports.Save = /*#__PURE__*/function (_$e$modules$CommandIn) {
               document.editor.isSaving = true;
               document.editor.isChangedDuringSave = false;
               settings.post_status = status;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
               elements = [];
               if (elementor.config.document.panel.has_elements) {
                 elements = container.model.get('elements').toJSON({
@@ -28716,8 +28736,12 @@ var EditorBase = exports["default"] = /*#__PURE__*/function (_Marionette$Applica
   }, {
     key: "getPreviewContainer",
     value: function getPreviewContainer() {
+<<<<<<< HEAD
       var _this$getPreviewView;
       return (_this$getPreviewView = this.getPreviewView()) === null || _this$getPreviewView === void 0 ? void 0 : _this$getPreviewView.getContainer();
+=======
+      return this.getPreviewView().getContainer();
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     }
   }, {
     key: "getContainer",
@@ -35533,6 +35557,7 @@ var _default = exports["default"] = Close;
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../assets/dev/js/editor/regions/navigator/commands/expand-all.js":
 /*!************************************************************************!*\
   !*** ../assets/dev/js/editor/regions/navigator/commands/expand-all.js ***!
@@ -35587,6 +35612,8 @@ var _default = exports["default"] = ExpandAll;
 
 /***/ }),
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../assets/dev/js/editor/regions/navigator/commands/index.js":
 /*!*******************************************************************!*\
   !*** ../assets/dev/js/editor/regions/navigator/commands/index.js ***!
@@ -35605,12 +35632,15 @@ Object.defineProperty(exports, "Close", ({
     return _close.Close;
   }
 }));
+<<<<<<< HEAD
 Object.defineProperty(exports, "ExpandAll", ({
   enumerable: true,
   get: function get() {
     return _expandAll.ExpandAll;
   }
 }));
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 Object.defineProperty(exports, "Open", ({
   enumerable: true,
   get: function get() {
@@ -35624,7 +35654,10 @@ Object.defineProperty(exports, "Toggle", ({
   }
 }));
 var _close = __webpack_require__(/*! ./close */ "../assets/dev/js/editor/regions/navigator/commands/close.js");
+<<<<<<< HEAD
 var _expandAll = __webpack_require__(/*! ./expand-all */ "../assets/dev/js/editor/regions/navigator/commands/expand-all.js");
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 var _open = __webpack_require__(/*! ./open */ "../assets/dev/js/editor/regions/navigator/commands/open.js");
 var _toggle = __webpack_require__(/*! ./toggle */ "../assets/dev/js/editor/regions/navigator/commands/toggle.js");
 
@@ -35659,8 +35692,13 @@ var Open = exports.Open = /*#__PURE__*/function (_$e$modules$CommandBa) {
   (0, _inherits2.default)(Open, _$e$modules$CommandBa);
   return (0, _createClass2.default)(Open, [{
     key: "apply",
+<<<<<<< HEAD
     value: function apply(args) {
       $e.route(this.component.getNamespace(), args);
+=======
+    value: function apply() {
+      $e.route(this.component.getNamespace());
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     }
   }]);
 }($e.modules.CommandBase);
@@ -35776,12 +35814,17 @@ var Component = exports["default"] = /*#__PURE__*/function (_ComponentBase) {
     key: "open",
     value: function open(args) {
       var _args$model = args.model,
+<<<<<<< HEAD
         model = _args$model === void 0 ? false : _args$model,
         _args$expandAllElemen = args.expandAllElements,
         expandAllElements = _args$expandAllElemen === void 0 ? false : _args$expandAllElemen;
       this.manager.open(model, {
         expandAllElements: expandAllElements
       });
+=======
+        model = _args$model === void 0 ? false : _args$model;
+      this.manager.open(model);
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
       return true;
     }
   }, {
@@ -35988,12 +36031,15 @@ var _default = exports["default"] = /*#__PURE__*/function (_Marionette$Composite
       this.childViewContainer = '.elementor-navigator__elements';
       this.listenTo(this.model, 'change', this.onModelChange).listenTo(this.model.get('settings'), 'change', this.onModelSettingsChange);
       this.listenTo(this.model, 'change:editor_settings', this.onModelEditorSettingsChange);
+<<<<<<< HEAD
       this.listenTo(this.model, 'title_external_change', this.onTitleExternalChange);
     }
   }, {
     key: "onTitleExternalChange",
     value: function onTitleExternalChange() {
       this.ui.title.text(this.model.getTitle());
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     }
   }, {
     key: "onModelEditorSettingsChange",
@@ -36688,7 +36734,11 @@ var _default = exports["default"] = /*#__PURE__*/function (_BaseRegion) {
     }
   }, {
     key: "open",
+<<<<<<< HEAD
     value: function open(model, options) {
+=======
+    value: function open(model) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
       this.$el.show();
       this.setSize();
       if (this.storage.docked) {
@@ -36697,9 +36747,12 @@ var _default = exports["default"] = /*#__PURE__*/function (_BaseRegion) {
       if (model) {
         model.trigger('request:edit');
       }
+<<<<<<< HEAD
       if (options !== null && options !== void 0 && options.expandAllElements) {
         this.currentView.elements.currentView.recursiveChildInvoke('toggleList', true);
       }
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
       this.saveStorage('visible', true);
       this.ensurePosition();
       elementorCommon.elements.$window.on('resize', this.ensurePosition);
@@ -43852,6 +43905,7 @@ module.exports = Marionette.CompositeView.extend({
     if (options.edit && elementor.documents.getCurrent().history.getActive()) {
       // Ensure container is created. TODO: Open editor via UI hook after `document/elements/create`.
       newView.getContainer();
+<<<<<<< HEAD
       newView._openEditingPanel(options);
     }
     return newView;
@@ -43861,6 +43915,14 @@ module.exports = Marionette.CompositeView.extend({
       scrollIntoView: options.scrollIntoView
     });
   },
+=======
+      newModel.trigger('request:edit', {
+        scrollIntoView: options.scrollIntoView
+      });
+    }
+    return newView;
+  },
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   createElementFromContainer: function createElementFromContainer(container) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     return this.createElementFromModel(container.model, options);

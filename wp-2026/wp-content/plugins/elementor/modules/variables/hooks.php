@@ -2,11 +2,17 @@
 
 namespace Elementor\Modules\Variables;
 
+<<<<<<< HEAD
 use Elementor\Modules\Variables\Adapters\Prop_Type_Adapter;
 use Elementor\Modules\Variables\Classes\Variable_Types_Registry;
 use Elementor\Modules\Variables\PropTypes\Color_Variable_Prop_Type;
 use Elementor\Modules\Variables\PropTypes\Font_Variable_Prop_Type;
 use Elementor\Modules\Variables\PropTypes\Size_Variable_Prop_Type;
+=======
+use Elementor\Modules\Variables\Classes\Variable_Types_Registry;
+use Elementor\Modules\Variables\PropTypes\Color_Variable_Prop_Type;
+use Elementor\Modules\Variables\PropTypes\Font_Variable_Prop_Type;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\Variables\Services\Batch_Operations\Batch_Processor;
 use Elementor\Modules\Variables\Services\Variables_Service;
 use Elementor\Modules\Variables\Storage\Variables_Repository;
@@ -16,7 +22,10 @@ use Elementor\Modules\Variables\Classes\CSS_Renderer as Variables_CSS_Renderer;
 use Elementor\Modules\Variables\Classes\Fonts;
 use Elementor\Modules\Variables\Classes\Rest_Api as Variables_API;
 use Elementor\Modules\Variables\Classes\Style_Schema;
+<<<<<<< HEAD
 use Elementor\Modules\Variables\Classes\Size_Style_Schema;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\Variables\Classes\Style_Transformers;
 use Elementor\Modules\Variables\Classes\Variables;
 
@@ -31,11 +40,19 @@ class Hooks {
 
 	public function register() {
 		$this->register_styles_transformers()
+<<<<<<< HEAD
 			->register_css_renderer()
 			->register_packages()
 			->register_fonts()
 			->register_api_endpoints()
 			->filter_for_style_schema()
+=======
+			->register_packages()
+			->filter_for_style_schema()
+			->register_css_renderer()
+			->register_fonts()
+			->register_api_endpoints()
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			->register_variable_types();
 
 		return $this;
@@ -45,8 +62,11 @@ class Hooks {
 		add_action( 'elementor/variables/register', function ( Variable_Types_Registry $registry ) {
 			$registry->register( Color_Variable_Prop_Type::get_key(), new Color_Variable_Prop_Type() );
 			$registry->register( Font_Variable_Prop_Type::get_key(), new Font_Variable_Prop_Type() );
+<<<<<<< HEAD
 			$registry->register( Prop_Type_Adapter::GLOBAL_CUSTOM_SIZE_VARIABLE_KEY, new Size_Variable_Prop_Type() );
 			$registry->register( Size_Variable_Prop_Type::get_key(), new Size_Variable_Prop_Type() );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		} );
 
 		return $this;
@@ -74,10 +94,13 @@ class Hooks {
 			return ( new Style_Schema() )->augment( $schema );
 		} );
 
+<<<<<<< HEAD
 		add_filter( 'elementor/atomic-widgets/styles/schema', function ( array $schema ) {
 			return ( new Size_Style_Schema() )->augment( $schema );
 		} );
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		return $this;
 	}
 

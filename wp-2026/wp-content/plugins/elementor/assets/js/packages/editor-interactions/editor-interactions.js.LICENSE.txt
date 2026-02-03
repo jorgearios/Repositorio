@@ -2,6 +2,7 @@
 
 /*! ../contexts/popup-state-context */
 
+<<<<<<< HEAD
 /*! ../interactions-controls-registry */
 
 /*! ../utils/create-interactions-provider */
@@ -11,6 +12,11 @@
 /*! ../utils/temp-id-utils */
 
 /*! ./components/controls/trigger */
+=======
+/*! ../utils/create-interactions-provider */
+
+/*! ../utils/get-interactions-config */
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 /*! ./components/empty-state */
 
@@ -24,6 +30,11 @@
 
 /*! ./controls/time-frame-indicator */
 
+<<<<<<< HEAD
+=======
+/*! ./controls/trigger */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./empty-state */
 
 /*! ./hooks/on-duplicate */
@@ -32,16 +43,22 @@
 
 /*! ./interaction-details */
 
+<<<<<<< HEAD
 /*! ./interactions-controls-registry */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./interactions-list */
 
 /*! ./interactions-repository */
 
 /*! ./providers/document-elements-interactions-provider */
 
+<<<<<<< HEAD
 /*! ./temp-id-utils */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./types */
 
 /*! ./utils/create-interactions-provider */
@@ -120,6 +137,7 @@
   !*** ./packages/packages/core/editor-interactions/src/hooks/on-duplicate.ts ***!
   \******************************************************************************/
 
+<<<<<<< HEAD
 /*!*******************************************************************************!*\
   !*** ./packages/packages/core/editor-interactions/src/utils/temp-id-utils.ts ***!
   \*******************************************************************************/
@@ -128,6 +146,8 @@
   !*** ./packages/packages/core/editor-interactions/src/utils/prop-value-utils.ts ***!
   \**********************************************************************************/
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!***********************************************************************************!*\
   !*** ./packages/packages/core/editor-interactions/src/components/empty-state.tsx ***!
   \***********************************************************************************/
@@ -168,10 +188,13 @@
   !*** ./packages/packages/core/editor-interactions/src/contexts/interactions-context.tsx ***!
   \******************************************************************************************/
 
+<<<<<<< HEAD
 /*!******************************************************************************************!*\
   !*** ./packages/packages/core/editor-interactions/src/interactions-controls-registry.ts ***!
   \******************************************************************************************/
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!*******************************************************************************************!*\
   !*** ./packages/packages/core/editor-interactions/src/components/interaction-details.tsx ***!
   \*******************************************************************************************/

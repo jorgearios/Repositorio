@@ -4,7 +4,11 @@ namespace Elementor\Modules\AtomicWidgets\Elements\Atomic_Svg;
 use Elementor\Modules\AtomicWidgets\Controls\Section;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Link_Control;
 use Elementor\Modules\AtomicWidgets\PropTypes\Classes_Prop_Type;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Widget_Base;
+=======
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Widget_Base;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Core\Utils\Svg\Svg_Sanitizer;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Svg_Control;
 use Elementor\Modules\AtomicWidgets\PropTypes\Image_Src_Prop_Type;
@@ -15,7 +19,10 @@ use Elementor\Modules\AtomicWidgets\PropTypes\Size_Prop_Type;
 use Elementor\Modules\AtomicWidgets\Styles\Style_Definition;
 use Elementor\Modules\AtomicWidgets\Styles\Style_Variant;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Text_Control;
+<<<<<<< HEAD
 use Elementor\Modules\Components\PropTypes\Overridable_Prop_Type;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Utils;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -28,8 +35,11 @@ class Atomic_Svg extends Atomic_Widget_Base {
 	const DEFAULT_SVG_PATH = ELEMENTOR_ASSETS_PATH . self::DEFAULT_SVG;
 	const DEFAULT_SVG_URL = ELEMENTOR_ASSETS_URL . self::DEFAULT_SVG;
 
+<<<<<<< HEAD
 	public static $widget_description = 'Display an SVG image with customizable styles and link options.';
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	public static function get_element_type(): string {
 		return 'e-svg';
 	}
@@ -49,11 +59,17 @@ class Atomic_Svg extends Atomic_Widget_Base {
 	protected static function define_props_schema(): array {
 		return [
 			'classes' => Classes_Prop_Type::make()->default( [] ),
+<<<<<<< HEAD
 			'svg' => Image_Src_Prop_Type::make()
 				->default_url( static::DEFAULT_SVG_URL )
 				->meta( 'is_svg', true ),
 			'link' => Link_Prop_Type::make(),
 			'attributes' => Attributes_Prop_Type::make()->meta( Overridable_Prop_Type::ignore() ),
+=======
+			'svg' => Image_Src_Prop_Type::make()->default_url( static::DEFAULT_SVG_URL ),
+			'link' => Link_Prop_Type::make(),
+			'attributes' => Attributes_Prop_Type::make(),
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		];
 	}
 
@@ -153,6 +169,7 @@ class Atomic_Svg extends Atomic_Widget_Base {
 		$attributes_string = trim( $data_attributes_string . ' ' . $all_attributes );
 
 		if ( isset( $settings['link'] ) && ! empty( $settings['link']['href'] ) ) {
+<<<<<<< HEAD
 			$html_tag = Utils::validate_html_tag( $settings['link']['tag'] ?? 'a' );
 			$link_attributes = $this->get_link_attributes( $settings['link'], true );
 			$link_attribute_key = $link_attributes['key'];
@@ -168,6 +185,15 @@ class Atomic_Svg extends Atomic_Widget_Base {
 				$attributes_string,
 				$svg_html,
 				$html_tag
+=======
+			$svg_html = sprintf(
+				'<a href="%s" target="%s" class="%s" %s>%s</a>',
+				$settings['link']['href'],
+				esc_attr( $settings['link']['target'] ),
+				esc_attr( $classes_string ),
+				$attributes_string,
+				$svg_html
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			);
 		} else {
 			$svg_html = sprintf( '<div class="%s" %s>%s</div>', esc_attr( $classes_string ), $attributes_string, $svg_html );
@@ -178,6 +204,7 @@ class Atomic_Svg extends Atomic_Widget_Base {
 	}
 
 	private function get_svg_content( $settings ) {
+<<<<<<< HEAD
 		$svg_data = $settings['svg'] ?? null;
 
 		if ( ! $svg_data ) {
@@ -191,6 +218,11 @@ class Atomic_Svg extends Atomic_Widget_Base {
 		if ( isset( $svg_data['id'] ) ) {
 			$content = Utils::file_get_contents(
 				get_attached_file( $svg_data['id'] )
+=======
+		if ( isset( $settings['svg']['id'] ) ) {
+			$content = Utils::file_get_contents(
+				get_attached_file( $settings['svg']['id'] )
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			);
 
 			if ( $content ) {
@@ -198,6 +230,7 @@ class Atomic_Svg extends Atomic_Widget_Base {
 			}
 		}
 
+<<<<<<< HEAD
 		if ( isset( $svg_data['url'] ) && static::DEFAULT_SVG_URL !== $svg_data['url'] ) {
 			return $this->fetch_svg_from_url( $svg_data['url'] );
 		}
@@ -221,6 +254,24 @@ class Atomic_Svg extends Atomic_Widget_Base {
 
 	private function get_default_svg_content() {
 		$content = Utils::file_get_contents( static::DEFAULT_SVG_PATH );
+=======
+		if (
+			isset( $settings['svg']['url'] ) &&
+			static::DEFAULT_SVG_URL !== $settings['svg']['url']
+		) {
+			$content = wp_safe_remote_get(
+				$settings['svg']['url']
+			);
+
+			if ( ! is_wp_error( $content ) ) {
+				return $content['body'];
+			}
+		}
+
+		$content = Utils::file_get_contents(
+			static::DEFAULT_SVG_PATH
+		);
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 		return $content ? $content : null;
 	}

@@ -288,10 +288,13 @@ class Elements_Manager {
 				'title' => esc_html__( 'Atomic Elements', 'elementor' ),
 				'hideIfEmpty' => true,
 			],
+<<<<<<< HEAD
 			'atomic-form' => [
 				'title' => esc_html__( 'Atomic Form', 'elementor' ),
 				'hideIfEmpty' => true,
 			],
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			'layout' => [
 				'title' => esc_html__( 'Layout', 'elementor' ),
 				'hideIfEmpty' => true,

@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 __( "This widget isn't compatible with components. Use atomic elements instead.", 'elementor' );
 __( "Can't add this component - components that contain each other can't be nested.", 'elementor' );
 __( 'Components', 'elementor' );
 __( 'Edit Component', 'elementor' );
+=======
+__( 'Components', 'elementor' );
+__( 'Edit Component', 'elementor' );
+__( 'Default', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /* translators: %s is the name of the user who is currently editing the document */
 __( '%s is currently editing this document', 'elementor' );
 __(
@@ -9,10 +15,13 @@ __(
 							'elementor'
 						);
 __( 'Close', 'elementor' );
+<<<<<<< HEAD
 __( 'Default', 'elementor' );
 __( 'Restore Element', 'elementor' );
 /* translators: %s: component name */
 __( 'Successfully deleted component %s', 'elementor' );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Override Property', 'elementor' );
 __( 'Default', 'elementor' );
 __( 'Name', 'elementor' );
@@ -24,6 +33,7 @@ __( 'Update', 'elementor' );
 __( 'Enter value', 'elementor' );
 __( 'Overridable property', 'elementor' );
 __( 'Make prop overridable', 'elementor' );
+<<<<<<< HEAD
 /* translators: %s: component name. */
 __( 'Edit %s', 'elementor' );
 __(
@@ -120,3 +130,29 @@ __( 'Component name is required.', 'elementor' );
 __( 'Component name is too short. Please enter at least 2 characters.', 'elementor' );
 __( 'Group name is required', 'elementor' );
 __( 'Group name already exists', 'elementor' );
+=======
+__( 'Exit component editing mode', 'elementor' );
+__( 'Component saved successfully as: %1$s (UID: %2$s)', 'elementor' );
+__( 'Failed to save component. Please try again.', 'elementor' );
+__( 'Save as a component', 'elementor' );
+__( 'Name', 'elementor' );
+__( 'Cancel', 'elementor' );
+__( 'Create', 'elementor' );
+__( 'Text that explains that there are no Components yet.', 'elementor' );
+__(
+					'Once you have Components, this is where you can manage them—rearrange, duplicate, rename and delete irrelevant classes.',
+					'elementor'
+				);
+__( 'To create a component, first design it, then choose one of three options:', 'elementor' );
+__( '1. Right-click and select Create Component', 'elementor' );
+__( '2. Use the component icon in the Structure panel', 'elementor' );
+__( '3. Use the component icon in the Edit panel header', 'elementor' );
+__( 'Sorry, nothing matched', 'elementor' );
+__( 'Try something else.', 'elementor' );
+__( 'Clear & try again', 'elementor' );
+__( 'Search', 'elementor' );
+__( 'Component name is too long. Please keep it under 50 characters.', 'elementor' );
+__( 'Component name already exists', 'elementor' );
+__( 'Component name is required.', 'elementor' );
+__( 'Component name is too short. Please enter at least 2 characters.', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275

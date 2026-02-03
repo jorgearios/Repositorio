@@ -14,16 +14,22 @@
 
 /*! ../../../utils/unlink-variable */
 
+<<<<<<< HEAD
 /*! ../../../utils/variables-to-list */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../../../variables-registry/variable-type-registry */
 
 /*! ../../context/variable-selection-popover.context */
 
 /*! ../../hooks/use-permissions */
 
+<<<<<<< HEAD
 /*! ../../hooks/use-quota-permissions */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../../utils/tracking */
 
 /*! ../../utils/validations */
@@ -60,8 +66,11 @@
 
 /*! ../hooks/use-prop-variables */
 
+<<<<<<< HEAD
 /*! ../hooks/use-quota-permissions */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../hooks/use-variable-bound-prop */
 
 /*! ../mismatch-variable-alert */
@@ -74,7 +83,11 @@
 
 /*! ../style-variables-repository */
 
+<<<<<<< HEAD
 /*! ../sync/license-info */
+=======
+/*! ../sync/get-canvas-iframe-document */
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 /*! ../tags/assigned-tag */
 
@@ -96,8 +109,11 @@
 
 /*! ../utils/validations */
 
+<<<<<<< HEAD
 /*! ../utils/variables-to-list */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../variables-registry/variable-type-registry */
 
 /*! ./api */
@@ -118,8 +134,17 @@
 
 /*! ./create-style-variables-repository */
 
+<<<<<<< HEAD
 /*! ./create-variable-type-registry */
 
+=======
+/*! ./create-variable-tool */
+
+/*! ./create-variable-type-registry */
+
+/*! ./delete-variable-tool */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./fields/label-field */
 
 /*! ./hooks/use-auto-edit */
@@ -132,18 +157,28 @@
 
 /*! ./init */
 
+<<<<<<< HEAD
 /*! ./manage-variable-tool */
 
 /*! ./mcp */
 
 /*! ./mcp/variables-resource */
 
+=======
+/*! ./list-variables-tool */
+
+/*! ./mcp */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./prop-types/color-variable-prop-type */
 
 /*! ./prop-types/font-variable-prop-type */
 
+<<<<<<< HEAD
 /*! ./prop-types/size-variable-prop-type */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./register-variable-types */
 
 /*! ./renderers/style-variables-renderer */
@@ -158,8 +193,11 @@
 
 /*! ./sync/enqueue-font */
 
+<<<<<<< HEAD
 /*! ./transformers/empty-transformer */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./ui/color-indicator */
 
 /*! ./ui/delete-confirmation-dialog */
@@ -180,9 +218,15 @@
 
 /*! ./ui/variable-table-cell */
 
+<<<<<<< HEAD
 /*! ./use-prop-variables */
 
 /*! ./utils/llm-propvalue-label-resolver */
+=======
+/*! ./update-variable-tool */
+
+/*! ./use-prop-variables */
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 /*! ./utils/resolve-css-variable */
 
@@ -234,8 +278,11 @@
 
 /*! @elementor/ui */
 
+<<<<<<< HEAD
 /*! @elementor/utils */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! @wordpress/i18n */
 
 /*! react */
@@ -256,10 +303,13 @@
   !*** external ["elementorV2","icons"] ***!
   \****************************************/
 
+<<<<<<< HEAD
 /*!****************************************!*\
   !*** external ["elementorV2","utils"] ***!
   \****************************************/
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!*****************************************!*\
   !*** external ["elementorV2","editor"] ***!
   \*****************************************/
@@ -349,10 +399,13 @@
   \**************************************************************************/
 
 /*!**************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-variables/src/sync/license-info.ts ***!
   \**************************************************************************/
 
 /*!**************************************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-variables/src/utils/validations.ts ***!
   \**************************************************************************/
 
@@ -381,7 +434,11 @@
   \********************************************************************************/
 
 /*!********************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-variables/src/utils/variables-to-list.ts ***!
+=======
+  !*** ./packages/packages/core/editor-variables/src/mcp/list-variables-tool.ts ***!
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   \********************************************************************************/
 
 /*!*********************************************************************************!*\
@@ -389,7 +446,19 @@
   \*********************************************************************************/
 
 /*!*********************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-variables/src/mcp/manage-variable-tool.ts ***!
+=======
+  !*** ./packages/packages/core/editor-variables/src/mcp/create-variable-tool.ts ***!
+  \*********************************************************************************/
+
+/*!*********************************************************************************!*\
+  !*** ./packages/packages/core/editor-variables/src/mcp/delete-variable-tool.ts ***!
+  \*********************************************************************************/
+
+/*!*********************************************************************************!*\
+  !*** ./packages/packages/core/editor-variables/src/mcp/update-variable-tool.ts ***!
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   \*********************************************************************************/
 
 /*!*********************************************************************************!*\
@@ -416,10 +485,13 @@
   !*** ./packages/packages/core/editor-variables/src/style-variables-repository.ts ***!
   \***********************************************************************************/
 
+<<<<<<< HEAD
 /*!************************************************************************************!*\
   !*** ./packages/packages/core/editor-variables/src/hooks/use-quota-permissions.ts ***!
   \************************************************************************************/
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!*************************************************************************************!*\
   !*** ./packages/packages/core/editor-variables/src/components/variable-restore.tsx ***!
   \*************************************************************************************/
@@ -465,7 +537,11 @@
   \****************************************************************************************/
 
 /*!****************************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-variables/src/transformers/empty-transformer.tsx ***!
+=======
+  !*** ./packages/packages/core/editor-variables/src/sync/get-canvas-iframe-document.ts ***!
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   \****************************************************************************************/
 
 /*!*****************************************************************************************!*\
@@ -492,6 +568,7 @@
   !*** ./packages/packages/core/editor-variables/src/prop-types/font-variable-prop-type.ts ***!
   \*******************************************************************************************/
 
+<<<<<<< HEAD
 /*!*******************************************************************************************!*\
   !*** ./packages/packages/core/editor-variables/src/prop-types/size-variable-prop-type.ts ***!
   \*******************************************************************************************/
@@ -500,6 +577,8 @@
   !*** ./packages/packages/core/editor-variables/src/utils/llm-propvalue-label-resolver.ts ***!
   \*******************************************************************************************/
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!********************************************************************************************!*\
   !*** ./packages/packages/core/editor-variables/src/prop-types/color-variable-prop-type.ts ***!
   \********************************************************************************************/

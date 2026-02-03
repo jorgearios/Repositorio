@@ -3,8 +3,13 @@
 namespace Elementor\Modules\AtomicWidgets\Utils;
 
 use Elementor\Core\Base\Document;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Element_Base;
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Widget_Base;
+=======
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Element_Base;
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Widget_Base;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) {

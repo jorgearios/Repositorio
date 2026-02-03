@@ -11,6 +11,7 @@ return [
 		'elementor-v2-editor',
 		'elementor-v2-editor-documents',
 		'elementor-v2-editor-responsive',
+<<<<<<< HEAD
 		'elementor-v2-editor-ui',
 		'elementor-v2-editor-v1-adapters',
 		'elementor-v2-http-client',
@@ -18,6 +19,12 @@ return [
 		'elementor-v2-locations',
 		'elementor-v2-menus',
 		'elementor-v2-mixpanel',
+=======
+		'elementor-v2-editor-v1-adapters',
+		'elementor-v2-icons',
+		'elementor-v2-locations',
+		'elementor-v2-menus',
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		'elementor-v2-ui',
 		'react',
 		'wp-i18n',

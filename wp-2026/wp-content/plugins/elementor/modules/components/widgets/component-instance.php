@@ -1,12 +1,18 @@
 <?php
 namespace Elementor\Modules\Components\Widgets;
 
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Widget_Base;
 use Elementor\Modules\AtomicWidgets\Elements\Base\Has_Template;
 use Elementor\Modules\Components\PropTypes\Component_Instance_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropsResolver\Render_Props_Resolver;
 use Elementor\Modules\Components\Transformers\Overridable_Transformer;
 use Elementor\Modules\Components\PropTypes\Overridable_Prop_Type;
+=======
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Widget_Base;
+use Elementor\Modules\AtomicWidgets\Elements\Has_Template;
+use Elementor\Modules\Components\PropTypes\Component_Instance_Prop_Type;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -37,7 +43,11 @@ class Component_Instance extends Atomic_Widget_Base {
 
 	protected static function define_props_schema(): array {
 		return [
+<<<<<<< HEAD
 			'component_instance' => Component_Instance_Prop_Type::make()->meta( Overridable_Prop_Type::ignore() )->required(),
+=======
+			'component_instance' => Component_Instance_Prop_Type::make()->required(),
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		];
 	}
 
@@ -60,6 +70,7 @@ class Component_Instance extends Atomic_Widget_Base {
 			'elementor/elements/component' => __DIR__ . '/component.html.twig',
 		];
 	}
+<<<<<<< HEAD
 
 	protected function define_render_context(): array {
 		$resolved_overrides = $this->get_resolved_overrides();
@@ -95,4 +106,6 @@ class Component_Instance extends Atomic_Widget_Base {
 
 		return $overrides;
 	}
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }

@@ -602,12 +602,17 @@ var OptIn = exports.OptIn = function OptIn(_ref) {
     sx: {
       flex: 1,
       maxWidth: {
+<<<<<<< HEAD
         md: '580px',
+=======
+        md: '507px',
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
         sm: '600px'
       },
       gap: 2.5,
       mx: 'auto'
     }
+<<<<<<< HEAD
   }, /*#__PURE__*/_react.default.createElement(_optInContent.TextNode, {
     variant: "h4",
     width: "fit-content"
@@ -621,6 +626,20 @@ var OptIn = exports.OptIn = function OptIn(_ref) {
       transform: 'translateY(-4px)',
       ml: 1
     }
+=======
+  }, /*#__PURE__*/_react.default.createElement(_ui.Stack, {
+    direction: "row",
+    alignItems: "center",
+    gap: 1
+  }, /*#__PURE__*/_react.default.createElement(_optInContent.TextNode, {
+    variant: "h4",
+    width: "fit-content"
+  }, i18n.title), /*#__PURE__*/_react.default.createElement(_ui.Chip, {
+    size: "small",
+    color: "secondary",
+    variant: "filled",
+    label: i18n.chip
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   })), /*#__PURE__*/_react.default.createElement(_ui.Stack, {
     direction: "column",
     gap: 3

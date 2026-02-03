@@ -2,9 +2,12 @@
 
 namespace Elementor\Modules\Variables\Storage\Entities;
 
+<<<<<<< HEAD
 use Elementor\Modules\Variables\Adapters\Prop_Type_Adapter;
 use Elementor\Modules\Variables\PropTypes\Size_Variable_Prop_Type;
 use Elementor\Modules\Variables\Storage\Exceptions\Type_Mismatch;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use InvalidArgumentException;
 
 class Variable {
@@ -85,10 +88,13 @@ class Variable {
 		return $this->data['type'];
 	}
 
+<<<<<<< HEAD
 	public function set_type( $type ) {
 		$this->data['type'] = $type;
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	public function has_order(): int {
 		return isset( $this->data['order'] );
 	}
@@ -97,6 +103,7 @@ class Variable {
 		return isset( $this->data['deleted_at'] );
 	}
 
+<<<<<<< HEAD
 	/**
 	 * @throws Type_Mismatch If a type that is not allowed to be changed is passed.
 	 */
@@ -133,6 +140,11 @@ class Variable {
 	public function apply_changes( array $data ): void {
 		$allowed_fields = [ 'label', 'value', 'order', 'type' ];
 		$has_changes = $this->maybe_apply_type( $data );
+=======
+	public function apply_changes( array $data ): void {
+		$allowed_fields = [ 'label', 'value', 'order' ];
+		$has_changes = false;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 		foreach ( $allowed_fields as $field ) {
 			if ( isset( $data[ $field ] ) ) {

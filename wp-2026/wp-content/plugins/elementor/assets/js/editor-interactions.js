@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports.config = void 0;
+<<<<<<< HEAD
 exports.extractAnimationId = extractAnimationId;
 exports.extractInteractionId = extractInteractionId;
 exports.getAnimateFunction = getAnimateFunction;
@@ -23,6 +24,10 @@ exports.getKeyframes = getKeyframes;
 exports.parseAnimationName = parseAnimationName;
 exports.parseInteractionsData = parseInteractionsData;
 exports.waitForAnimateFunction = waitForAnimateFunction;
+=======
+exports.getKeyframes = getKeyframes;
+exports.parseAnimationName = parseAnimationName;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
 var _window$ElementorInte;
 var config = exports.config = ((_window$ElementorInte = window.ElementorInteractionsConfig) === null || _window$ElementorInte === void 0 ? void 0 : _window$ElementorInte.constants) || {
@@ -30,6 +35,7 @@ var config = exports.config = ((_window$ElementorInte = window.ElementorInteract
   defaultDelay: 0,
   slideDistance: 100,
   scaleStart: 0,
+<<<<<<< HEAD
   ease: 'easeIn'
 };
 function getKeyframes(effect, type, direction) {
@@ -37,12 +43,54 @@ function getKeyframes(effect, type, direction) {
   var keyframes = {};
   if ('fade' === effect) {
     keyframes.opacity = isIn ? [0, 1] : [1, 0];
+=======
+  easing: 'linear'
+};
+function calculateSlideDistance(element, direction) {
+  if (!element) {
+    return config.slideDistance;
+  }
+  var rect = element.getBoundingClientRect();
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  var isLtr = 'ltr' === document.documentElement.dir || 'ltr' === document.body.dir;
+  switch (direction) {
+    case 'left':
+      return Math.min((isLtr ? rect.left : rect.right) + rect.width, viewportWidth + rect.width);
+    case 'right':
+      return Math.min(viewportWidth - (isLtr ? rect.right : rect.left) + rect.width, viewportWidth + rect.width);
+    case 'top':
+      return Math.min(rect.top + rect.height, viewportHeight + rect.height);
+    case 'bottom':
+      return Math.min(viewportHeight - rect.bottom + rect.height, viewportHeight + rect.height);
+    default:
+      return config.slideDistance;
+  }
+}
+function getKeyframes(effect, type, direction) {
+  var element = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+  var isIn = 'in' === type;
+  var keyframes = {};
+  var hasDirection = !!direction;
+  if ('fade' === effect) {
+    if (hasDirection && isIn) {
+      keyframes.opacity = [0, 0, 0.2, 0.6, 1];
+    } else if (hasDirection && !isIn) {
+      keyframes.opacity = [1, 0.8, 0.4, 0, 0];
+    } else {
+      keyframes.opacity = isIn ? [0, 1] : [1, 0];
+    }
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   }
   if ('scale' === effect) {
     keyframes.scale = isIn ? [config.scaleStart, 1] : [1, config.scaleStart];
   }
   if (direction) {
+<<<<<<< HEAD
     var distance = config.slideDistance;
+=======
+    var distance = calculateSlideDistance(element, direction);
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     var movement = {
       left: {
         x: isIn ? [-distance, 0] : [0, -distance]
@@ -79,6 +127,7 @@ function parseAnimationName(name) {
     delay: delay ? parseInt(delay, 10) : config.defaultDelay
   };
 }
+<<<<<<< HEAD
 function extractAnimationId(interaction) {
   var _interaction$animatio;
   if ('string' === typeof interaction) {
@@ -146,6 +195,8 @@ function parseInteractionsData(data) {
   }
   return data;
 }
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 /***/ }),
 
@@ -177,6 +228,23 @@ module.exports = _arrayWithHoles, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
+/*!*******************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
+  \*******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "../node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
+function _arrayWithoutHoles(r) {
+  if (Array.isArray(r)) return arrayLikeToArray(r);
+}
+module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../node_modules/@babel/runtime/helpers/defineProperty.js":
 /*!****************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/defineProperty.js ***!
@@ -211,6 +279,22 @@ module.exports = _interopRequireDefault, module.exports.__esModule = true, modul
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "../node_modules/@babel/runtime/helpers/iterableToArray.js":
+/*!*****************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/iterableToArray.js ***!
+  \*****************************************************************/
+/***/ ((module) => {
+
+function _iterableToArray(r) {
+  if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r);
+}
+module.exports = _iterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
 /*!**********************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
@@ -261,6 +345,22 @@ module.exports = _nonIterableRest, module.exports.__esModule = true, module.expo
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "../node_modules/@babel/runtime/helpers/nonIterableSpread.js":
+/*!*******************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/nonIterableSpread.js ***!
+  \*******************************************************************/
+/***/ ((module) => {
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+module.exports = _nonIterableSpread, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../node_modules/@babel/runtime/helpers/slicedToArray.js":
 /*!***************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/slicedToArray.js ***!
@@ -278,6 +378,26 @@ module.exports = _slicedToArray, module.exports.__esModule = true, module.export
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "../node_modules/@babel/runtime/helpers/toConsumableArray.js":
+/*!*******************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
+  \*******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles.js */ "../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
+var iterableToArray = __webpack_require__(/*! ./iterableToArray.js */ "../node_modules/@babel/runtime/helpers/iterableToArray.js");
+var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
+var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread.js */ "../node_modules/@babel/runtime/helpers/nonIterableSpread.js");
+function _toConsumableArray(r) {
+  return arrayWithoutHoles(r) || iterableToArray(r) || unsupportedIterableToArray(r) || nonIterableSpread();
+}
+module.exports = _toConsumableArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../node_modules/@babel/runtime/helpers/toPrimitive.js":
 /*!*************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/toPrimitive.js ***!
@@ -389,16 +509,28 @@ var __webpack_exports__ = {};
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+<<<<<<< HEAD
+=======
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "../node_modules/@babel/runtime/helpers/toConsumableArray.js"));
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/defineProperty.js"));
 var _interactionsUtils = __webpack_require__(/*! ./interactions-utils.js */ "../modules/interactions/assets/js/interactions-utils.js");
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0, _defineProperty2.default)(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 function applyAnimation(element, animConfig, animateFunc) {
+<<<<<<< HEAD
   var keyframes = (0, _interactionsUtils.getKeyframes)(animConfig.effect, animConfig.type, animConfig.direction);
   var options = {
     duration: animConfig.duration / 1000,
     delay: animConfig.delay / 1000,
     ease: _interactionsUtils.config.ease
+=======
+  var keyframes = (0, _interactionsUtils.getKeyframes)(animConfig.effect, animConfig.type, animConfig.direction, element);
+  var options = {
+    duration: animConfig.duration / 1000,
+    delay: animConfig.delay / 1000,
+    easing: _interactionsUtils.config.easing
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   };
   var initialKeyframes = {};
   Object.keys(keyframes).forEach(function (key) {
@@ -445,6 +577,7 @@ function findElementByInteractionId(interactionId) {
   return document.querySelector('[data-interaction-id="' + interactionId + '"]');
 }
 function applyInteractionsToElement(element, interactionsData) {
+<<<<<<< HEAD
   var animateFunc = (0, _interactionsUtils.getAnimateFunction)();
   if (!animateFunc) {
     return;
@@ -456,6 +589,27 @@ function applyInteractionsToElement(element, interactionsData) {
   var interactions = Object.values((parsedData === null || parsedData === void 0 ? void 0 : parsedData.items) || []);
   interactions.forEach(function (interaction) {
     var animationName = (0, _interactionsUtils.extractAnimationId)(interaction);
+=======
+  var _window$Motion, _parsedData;
+  var animateFunc = 'undefined' !== typeof animate ? animate : (_window$Motion = window.Motion) === null || _window$Motion === void 0 ? void 0 : _window$Motion.animate;
+  if (!animateFunc) {
+    return;
+  }
+  var parsedData;
+  if ('string' === typeof interactionsData) {
+    try {
+      parsedData = JSON.parse(interactionsData);
+    } catch (error) {
+      return;
+    }
+  } else {
+    parsedData = interactionsData;
+  }
+  var interactions = Object.values((_parsedData = parsedData) === null || _parsedData === void 0 ? void 0 : _parsedData.items);
+  interactions.forEach(function (interaction) {
+    var _interaction$animatio;
+    var animationName = 'string' === typeof interaction ? interaction : interaction === null || interaction === void 0 || (_interaction$animatio = interaction.animation) === null || _interaction$animatio === void 0 ? void 0 : _interaction$animatio.animation_id;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     var animConfig = animationName && (0, _interactionsUtils.parseAnimationName)(animationName);
     if (animConfig) {
       applyAnimation(element, animConfig, animateFunc);
@@ -466,6 +620,7 @@ var previousInteractionsData = [];
 function handleInteractionsUpdate() {
   var currentInteractionsData = getInteractionsData();
   var changedItems = currentInteractionsData.filter(function (currentItem) {
+<<<<<<< HEAD
     var _currentItem$interact, _previousItem$interac;
     var previousItem = previousInteractionsData.find(function (prev) {
       return prev.dataId === currentItem.dataId;
@@ -479,10 +634,20 @@ function handleInteractionsUpdate() {
   });
   changedItems.forEach(function (item) {
     var _previousInteractions, _item$interactions;
+=======
+    var previousItem = previousInteractionsData.find(function (prev) {
+      return prev.dataId === currentItem.dataId;
+    });
+    return !previousItem || previousItem.interactions !== currentItem.interactions;
+  });
+  changedItems.forEach(function (item) {
+    var _previousInteractions, _item$interactions, _item$interactions2, _prevInteractions$ite;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     var element = findElementByInteractionId(item.dataId);
     var prevInteractions = (_previousInteractions = previousInteractionsData.find(function (prev) {
       return prev.dataId === item.dataId;
     })) === null || _previousInteractions === void 0 ? void 0 : _previousInteractions.interactions;
+<<<<<<< HEAD
     if (!element || !((_item$interactions = item.interactions) !== null && _item$interactions !== void 0 && (_item$interactions = _item$interactions.items) !== null && _item$interactions !== void 0 && _item$interactions.length)) {
       return;
     }
@@ -495,11 +660,22 @@ function handleInteractionsUpdate() {
       applyInteractionsToElement(element, _objectSpread(_objectSpread({}, item.interactions), {}, {
         items: changedInteractions
       }));
+=======
+    if (element && ((_item$interactions = item.interactions) === null || _item$interactions === void 0 || (_item$interactions = _item$interactions.items) === null || _item$interactions === void 0 ? void 0 : _item$interactions.length) > 0 && ((_item$interactions2 = item.interactions) === null || _item$interactions2 === void 0 || (_item$interactions2 = _item$interactions2.items) === null || _item$interactions2 === void 0 ? void 0 : _item$interactions2.length) === (prevInteractions === null || prevInteractions === void 0 || (_prevInteractions$ite = prevInteractions.items) === null || _prevInteractions$ite === void 0 ? void 0 : _prevInteractions$ite.length)) {
+      var interactionsToApply = _objectSpread(_objectSpread({}, item.interactions), {}, {
+        items: (0, _toConsumableArray2.default)(item.interactions.items).filter(function (interaction, index) {
+          var _prevInteractions$ite2;
+          return (prevInteractions === null || prevInteractions === void 0 || (_prevInteractions$ite2 = prevInteractions.items[index]) === null || _prevInteractions$ite2 === void 0 || (_prevInteractions$ite2 = _prevInteractions$ite2.animation) === null || _prevInteractions$ite2 === void 0 ? void 0 : _prevInteractions$ite2.animation_id) !== interaction.animation.animation_id;
+        })
+      });
+      applyInteractionsToElement(element, interactionsToApply);
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     }
   });
   previousInteractionsData = currentInteractionsData;
 }
 function initEditorInteractionsHandler() {
+<<<<<<< HEAD
   (0, _interactionsUtils.waitForAnimateFunction)(function () {
     var head = document.head;
     var scriptTag = null;
@@ -533,10 +709,51 @@ function initEditorInteractionsHandler() {
     });
     scriptTag = document.querySelector('script[data-e-interactions="true"]');
     if (scriptTag) {
+=======
+  var _window$Motion2;
+  if ('undefined' === typeof animate && !((_window$Motion2 = window.Motion) !== null && _window$Motion2 !== void 0 && _window$Motion2.animate)) {
+    setTimeout(initEditorInteractionsHandler, 100);
+    return;
+  }
+  var head = document.head;
+  var scriptTag = null;
+  var observer = null;
+  function setupObserver(tag) {
+    if (observer) {
+      observer.disconnect();
+    }
+    observer = new MutationObserver(function () {
+      handleInteractionsUpdate();
+    });
+    observer.observe(tag, {
+      childList: true,
+      characterData: true,
+      subtree: true
+    });
+    handleInteractionsUpdate();
+    registerWindowEvents();
+  }
+  var headObserver = new MutationObserver(function () {
+    var foundScriptTag = document.querySelector('script[data-e-interactions="true"]');
+    if (foundScriptTag && foundScriptTag !== scriptTag) {
+      scriptTag = foundScriptTag;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
       setupObserver(scriptTag);
       headObserver.disconnect();
     }
   });
+<<<<<<< HEAD
+=======
+  headObserver.observe(head, {
+    childList: true,
+    subtree: true
+  });
+  scriptTag = document.querySelector('script[data-e-interactions="true"]');
+  if (scriptTag) {
+    setupObserver(scriptTag);
+    headObserver.disconnect();
+  }
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }
 function registerWindowEvents() {
   window.top.addEventListener('atomic/play_interactions', handlePlayInteractions);
@@ -544,7 +761,11 @@ function registerWindowEvents() {
 function handlePlayInteractions(event) {
   var _event$detail = event.detail,
     elementId = _event$detail.elementId,
+<<<<<<< HEAD
     interactionId = _event$detail.interactionId;
+=======
+    animationId = _event$detail.animationId;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   var interactionsData = getInteractionsData();
   var item = interactionsData.find(function (elementItemData) {
     return elementItemData.dataId === elementId;
@@ -553,6 +774,7 @@ function handlePlayInteractions(event) {
     return;
   }
   var element = findElementByInteractionId(elementId);
+<<<<<<< HEAD
   if (!element) {
     return;
   }
@@ -563,6 +785,17 @@ function handlePlayInteractions(event) {
     })
   });
   applyInteractionsToElement(element, interactionsCopy);
+=======
+  if (element) {
+    var interactionsCopy = _objectSpread(_objectSpread({}, item.interactions), {}, {
+      items: (0, _toConsumableArray2.default)(item.interactions.items)
+    });
+    interactionsCopy.items = interactionsCopy.items.filter(function (interactionItem) {
+      return interactionItem.animation.animation_id === animationId;
+    });
+    applyInteractionsToElement(element, JSON.stringify(interactionsCopy));
+  }
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }
 if ('loading' === document.readyState) {
   document.addEventListener('DOMContentLoaded', initEditorInteractionsHandler);

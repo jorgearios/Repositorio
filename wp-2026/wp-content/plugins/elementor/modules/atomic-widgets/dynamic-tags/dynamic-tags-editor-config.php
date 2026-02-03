@@ -84,7 +84,11 @@ class Dynamic_Tags_Editor_Config {
 			'name'            => $tag['name'],
 			'categories'      => $tag['categories'],
 			'label'           => $tag['title'] ?? '',
+<<<<<<< HEAD
 			'group'           => $tag['atomic_group'] ?? $tag['group'] ?? '',
+=======
+			'group'           => $tag['group'] ?? '',
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			'atomic_controls' => [],
 			'props_schema'    => $this->schemas->get( $tag['name'] ),
 		];
@@ -364,6 +368,10 @@ class Dynamic_Tags_Editor_Config {
 
 	private function convert_media_control_to_atomic( $control ) {
 		return Image_Control::bind_to( $control['name'] )
+<<<<<<< HEAD
+=======
+			->set_show_mode( 'media' )
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			->set_label( $control['label'] );
 	}
 

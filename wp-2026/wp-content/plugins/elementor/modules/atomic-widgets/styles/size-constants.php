@@ -13,22 +13,31 @@ class Size_Constants {
 	const UNIT_REM = 'rem';
 	const UNIT_VW = 'vw';
 	const UNIT_VH = 'vh';
+<<<<<<< HEAD
 	const UNIT_CH = 'ch';
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	const UNIT_AUTO = 'auto';
 	const UNIT_CUSTOM = 'custom';
 	const UNIT_SECOND = 's';
 	const UNIT_MILLI_SECOND = 'ms';
 	const UNIT_ANGLE_DEG = 'deg';
 
+<<<<<<< HEAD
 	const DEFAULT_UNIT = self::UNIT_PX;
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	const LENGTH_UNITS = [
 		self::UNIT_PX,
 		self::UNIT_EM,
 		self::UNIT_REM,
 		self::UNIT_VW,
 		self::UNIT_VH,
+<<<<<<< HEAD
 		self::UNIT_CH,
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	];
 
 	const TIME_UNITS = [ self::UNIT_SECOND, self::UNIT_MILLI_SECOND ];
@@ -51,12 +60,19 @@ class Size_Constants {
 			...self::LENGTH_UNITS,
 			self::UNIT_PERCENT,
 			self::UNIT_AUTO,
+<<<<<<< HEAD
 			self::UNIT_CUSTOM,
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		];
 	}
 
 	private static function units_without_auto(): array {
+<<<<<<< HEAD
 		return [ ...self::LENGTH_UNITS, self::UNIT_PERCENT, self::UNIT_CUSTOM ];
+=======
+		return [ ...self::LENGTH_UNITS, self::UNIT_PERCENT ];
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	public static function layout(): array {
@@ -76,7 +92,11 @@ class Size_Constants {
 	}
 
 	public static function anchor_offset(): array {
+<<<<<<< HEAD
 		return [ ...self::LENGTH_UNITS, self::UNIT_CUSTOM ];
+=======
+		return self::LENGTH_UNITS;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	public static function typography(): array {
@@ -88,12 +108,19 @@ class Size_Constants {
 			self::UNIT_PX,
 			self::UNIT_EM,
 			self::UNIT_REM,
+<<<<<<< HEAD
 			self::UNIT_CUSTOM,
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		];
 	}
 
 	public static function transition(): array {
+<<<<<<< HEAD
 		return [ ...self::TIME_UNITS, self::UNIT_CUSTOM ];
+=======
+		return self::TIME_UNITS;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	public static function border(): array {
@@ -102,7 +129,11 @@ class Size_Constants {
 
 
 	public static function opacity(): array {
+<<<<<<< HEAD
 		return [ self::UNIT_PERCENT, self::UNIT_CUSTOM ];
+=======
+		return [ self::UNIT_PERCENT ];
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	public static function box_shadow(): array {
@@ -110,7 +141,11 @@ class Size_Constants {
 	}
 
 	public static function rotate(): array {
+<<<<<<< HEAD
 		return [ ...self::ANGLE_UNITS, self::UNIT_CUSTOM ];
+=======
+		return self::ANGLE_UNITS;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	public static function transform(): array {
@@ -118,6 +153,7 @@ class Size_Constants {
 	}
 
 	public static function drop_shadow(): array {
+<<<<<<< HEAD
 		return [ ...self::LENGTH_UNITS, self::UNIT_CUSTOM ];
 	}
 
@@ -135,5 +171,24 @@ class Size_Constants {
 
 	public static function hue_rotate_filter(): array {
 		return [ ...self::ANGLE_UNITS, self::UNIT_CUSTOM ];
+=======
+		return self::LENGTH_UNITS;
+	}
+
+	public static function blur_filter(): array {
+		return self::LENGTH_UNITS;
+	}
+
+	public static function intensity_filter(): array {
+		return [ self::UNIT_PERCENT ];
+	}
+
+	public static function color_tone_filter(): array {
+		return [ self::UNIT_PERCENT ];
+	}
+
+	public static function hue_rotate_filter(): array {
+		return self::ANGLE_UNITS;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 }

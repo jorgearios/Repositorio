@@ -1,7 +1,11 @@
 <?php
 namespace Elementor\Modules\AtomicWidgets\Elements\Atomic_Tabs;
 
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Elements\Base\Atomic_Element_Base;
+=======
+use Elementor\Modules\AtomicWidgets\Elements\Atomic_Element_Base;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\AtomicWidgets\PropTypes\Primitives\Boolean_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Primitives\String_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Size_Prop_Type;
@@ -11,7 +15,11 @@ use Elementor\Modules\AtomicWidgets\Controls\Section;
 use Elementor\Modules\AtomicWidgets\Controls\Types\Text_Control;
 use Elementor\Modules\AtomicWidgets\PropTypes\Classes_Prop_Type;
 use Elementor\Modules\AtomicWidgets\PropTypes\Attributes_Prop_Type;
+<<<<<<< HEAD
 use Elementor\Modules\Components\PropTypes\Overridable_Prop_Type;
+=======
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -20,11 +28,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Atomic_Tabs_Content_Area extends Atomic_Element_Base {
 	const BASE_STYLE_KEY = 'base';
 
+<<<<<<< HEAD
 	public function __construct( $data = [], $args = null ) {
 		parent::__construct( $data, $args );
 		$this->meta( 'llm_support', false );
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	public static function get_type() {
 		return 'e-tabs-content-area';
 	}
@@ -53,7 +64,11 @@ class Atomic_Tabs_Content_Area extends Atomic_Element_Base {
 		return [
 			'classes' => Classes_Prop_Type::make()
 				->default( [] ),
+<<<<<<< HEAD
 			'attributes' => Attributes_Prop_Type::make()->meta( Overridable_Prop_Type::ignore() ),
+=======
+			'attributes' => Attributes_Prop_Type::make(),
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		];
 	}
 

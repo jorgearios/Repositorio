@@ -1,4 +1,5 @@
 __( 'Exit to WordPress', 'elementor' );
+<<<<<<< HEAD
 __( 'Send Feedback', 'elementor' );
 __( 'More', 'elementor' );
 __( 'Elementor Logo', 'elementor' );
@@ -11,6 +12,10 @@ __( 'Your Feedback', 'elementor' );
 __( 'Submit Another Feedback', 'elementor' );
 __( 'Submit', 'elementor' );
 __( 'Connect to Elementor', 'elementor' );
+=======
+__( 'More', 'elementor' );
+__( 'Elementor Logo', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Integrations', 'elementor' );
 __( 'User Preferences', 'elementor' );
 __( 'Theme Builder', 'elementor' );

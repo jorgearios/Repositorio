@@ -94,8 +94,13 @@ __( 'Show less', 'elementor' );
 __( 'Show more', 'elementor' );
 __( 'What\'s included:', 'elementor' );
 __( 'Import', 'elementor' );
+<<<<<<< HEAD
 __( 'Setting up your website template...', 'elementor' );
 __( 'This usually takes a few moments.', 'elementor' );
+=======
+__( 'Settings up your website templates...', 'elementor' );
+__( 'This usually take a few moments.', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Don\'t close this window until the process is finished.', 'elementor' );
 __( 'Import', 'elementor' );
 __( 'Import a website template', 'elementor' );
@@ -183,6 +188,11 @@ __( 'Export as .zip', 'elementor' );
 __( 'Export a Website template?', 'elementor' );
 __( 'Choose which Elementor components - templates, content and site settings - to include in your website templates file. By default, all of your components will be exported.', 'elementor' );
 __( 'Learn more', 'elementor' );
+<<<<<<< HEAD
+=======
+__( 'Export', 'elementor' );
+__( 'Close', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 __( 'Unable to download the Website Template', 'elementor' );
 __( 'We couldn’t download the Website Template due to technical difficulties on our part. Try again and if the problem persists contact ', 'elementor' );
 __( 'Support', 'elementor' );
@@ -231,6 +241,10 @@ __( 'The maximum website template library size is %s GB. To save this file, you 
 __( 'Upgrade now', 'elementor' );
 __( 'Cancel', 'elementor' );
 __( 'Export as .zip', 'elementor' );
+<<<<<<< HEAD
 __( 'Try Again', 'elementor' );
 __( 'Export', 'elementor' );
 __( 'Close', 'elementor' );
+=======
+__( 'Try Again', 'elementor' );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275

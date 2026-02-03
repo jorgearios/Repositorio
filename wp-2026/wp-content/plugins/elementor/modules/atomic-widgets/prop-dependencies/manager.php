@@ -75,6 +75,7 @@ class Manager {
 	 * }
 	 * @return self
 	 */
+<<<<<<< HEAD
 	public function where( array $config, $new_value = null ): self {
 		if ( isset( $config['terms'] ) ) {
 			if ( empty( $this->dependencies ) ) {
@@ -91,6 +92,9 @@ class Manager {
 			return $this;
 		}
 
+=======
+	public function where( array $config ): self {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		if ( ! isset( $config['operator'] ) || ! isset( $config['path'] ) ) {
 			Utils::safe_throw( 'Term missing mandatory configurations' );
 		}
@@ -102,7 +106,10 @@ class Manager {
 		$term = [
 			'operator' => $config['operator'],
 			'path' => $config['path'],
+<<<<<<< HEAD
 			'nestedPath' => $config['nestedPath'] ?? null,
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			'value' => $config['value'] ?? null,
 			'newValue' => $config['newValue'] ?? null,
 		];

@@ -140,7 +140,11 @@ class Variables_Collection extends Collection {
 
 		foreach ( $this->all() as $variable ) {
 			if ( ! $variable->is_deleted() ) {
+<<<<<<< HEAD
 				++$active_count;
+=======
+				$active_count++;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			}
 		}
 

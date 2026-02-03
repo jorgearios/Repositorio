@@ -134,7 +134,10 @@ class Modules_Manager {
 			'atomic-opt-in',
 			'components',
 			'interactions',
+<<<<<<< HEAD
 			'feedback',
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			'editor-one',
 		];
 	}

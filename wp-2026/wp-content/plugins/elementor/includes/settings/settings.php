@@ -5,6 +5,10 @@ use Elementor\Core\Admin\Menu\Admin_Menu_Manager;
 use Elementor\Core\Files\Fonts\Google_Font;
 use Elementor\Includes\Settings\AdminMenuItems\Admin_Menu_Item;
 use Elementor\Includes\Settings\AdminMenuItems\Get_Help_Menu_Item;
+<<<<<<< HEAD
+=======
+use Elementor\Includes\Settings\AdminMenuItems\Getting_Started_Menu_Item;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Modules\Promotions\Module as Promotions_Module;
 use Elementor\TemplateLibrary\Source_Local;
 use Elementor\Modules\Home\Module as Home_Module;
@@ -170,6 +174,10 @@ class Settings extends Settings_Page {
 	 */
 	private function register_knowledge_base_menu( Admin_Menu_Manager $admin_menu ) {
 		if ( ! Plugin::instance()->modules_manager->get_modules( 'editor-one' ) ) {
+<<<<<<< HEAD
+=======
+			$admin_menu->register( 'elementor-getting-started', new Getting_Started_Menu_Item() );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			$admin_menu->register( 'go_knowledge_base_site', new Get_Help_Menu_Item() );
 		}
 	}
@@ -533,6 +541,10 @@ class Settings extends Settings_Page {
 	 */
 	private function maybe_remove_all_admin_notices() {
 		$elementor_pages = [
+<<<<<<< HEAD
+=======
+			'elementor-getting-started',
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			'elementor-system-info',
 			'e-form-submissions',
 			'elementor_custom_fonts',

@@ -64,7 +64,11 @@ class Module extends BaseModule {
 			 * @throws \Exception
 			 */
 			function( $data, $document ) {
+<<<<<<< HEAD
 				$validation = new Validation();
+=======
+				$validation = new Validation( $this->get_presets() );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				$document_after_sanitization = $validation->sanitize( $data );
 				$validation->validate();
 

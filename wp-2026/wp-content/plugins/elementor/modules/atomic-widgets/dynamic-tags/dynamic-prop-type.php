@@ -35,16 +35,22 @@ class Dynamic_Prop_Type extends Plain_Prop_Type {
 		return $this->settings['categories'] ?? [];
 	}
 
+<<<<<<< HEAD
 	public static function is_dynamic_prop_value( $value ): bool {
 		return isset( $value['$$type'] ) && self::get_key() === $value['$$type'];
 	}
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	protected function validate_value( $value ): bool {
 		$is_valid_structure = (
 			isset( $value['name'] ) &&
 			is_string( $value['name'] ) &&
+<<<<<<< HEAD
 			isset( $value['group'] ) &&
 			is_string( $value['group'] ) &&
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			isset( $value['settings'] ) &&
 			is_array( $value['settings'] )
 		);
@@ -73,7 +79,10 @@ class Dynamic_Prop_Type extends Plain_Prop_Type {
 
 		return [
 			'name' => $value['name'],
+<<<<<<< HEAD
 			'group' => $value['group'],
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			'settings' => $sanitized,
 		];
 	}

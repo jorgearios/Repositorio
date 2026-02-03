@@ -6,11 +6,15 @@ use Elementor\Core\Base\Module as BaseModule;
 use Elementor\Core\Experiments\Manager as ExperimentsManager;
 use Elementor\Modules\AtomicWidgets\Module as AtomicWidgetsModule;
 use Elementor\Modules\Variables\Classes\Variable_Types_Registry;
+<<<<<<< HEAD
 use Elementor\Modules\Variables\PropTypes\Color_Variable_Prop_Type;
 use Elementor\Modules\Variables\PropTypes\Font_Variable_Prop_Type;
 use Elementor\Modules\Variables\PropTypes\Size_Variable_Prop_Type;
 use Elementor\Plugin;
 use Elementor\Utils;
+=======
+use Elementor\Plugin;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -53,7 +57,10 @@ class Module extends BaseModule {
 		$this->hooks()->register();
 
 		add_action( 'init', [ $this, 'init_variable_types_registry' ] );
+<<<<<<< HEAD
 		add_action( 'elementor/editor/before_enqueue_scripts', fn () => $this->enqueue_editor_scripts() );
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	private function register_features() {
@@ -82,6 +89,7 @@ class Module extends BaseModule {
 	public function get_variable_types_registry(): Variable_Types_Registry {
 		return $this->variable_types_registry;
 	}
+<<<<<<< HEAD
 
 	private function get_quota_config(): array {
 		return [
@@ -102,4 +110,6 @@ class Module extends BaseModule {
 			'before'
 		);
 	}
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }

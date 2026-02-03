@@ -9,13 +9,19 @@ return [
 	'handle' => 'elementor-v2-editor-global-classes',
 	'deps' => [
 		'elementor-v2-editor',
+<<<<<<< HEAD
 		'elementor-v2-editor-canvas',
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		'elementor-v2-editor-current-user',
 		'elementor-v2-editor-documents',
 		'elementor-v2-editor-editing-panel',
 		'elementor-v2-editor-mcp',
 		'elementor-v2-editor-panels',
+<<<<<<< HEAD
 		'elementor-v2-editor-props',
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		'elementor-v2-editor-styles',
 		'elementor-v2-editor-styles-repository',
 		'elementor-v2-editor-ui',

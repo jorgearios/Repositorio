@@ -90,9 +90,12 @@ class Module extends Base_Module {
 
 		add_action( 'elementor/editor/before_enqueue_scripts', [ $this, 'enqueue_react_data' ] );
 		add_action( 'elementor/editor/before_enqueue_scripts', [ $this, 'enqueue_editor_v4_alphachip' ] );
+<<<<<<< HEAD
 		add_filter( 'elementor/editor/localize_settings', [ $this, 'add_v4_promotions_data' ] );
 
 		$this->register_display_conditions_promo_hooks();
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	private function handle_external_redirects() {
@@ -198,6 +201,7 @@ class Module extends Base_Module {
 		];
 	}
 
+<<<<<<< HEAD
 	public function add_v4_promotions_data( array $settings ): array {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return $settings;
@@ -291,4 +295,9 @@ class Module extends Base_Module {
 
 		return $element_controls;
 	}
+=======
+	private function is_editor_one_active(): bool {
+		return (bool) Plugin::instance()->modules_manager->get_modules( 'editor-one' );
+	}
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 }

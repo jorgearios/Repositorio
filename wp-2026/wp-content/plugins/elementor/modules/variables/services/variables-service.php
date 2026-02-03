@@ -8,8 +8,11 @@ use Elementor\Modules\Variables\Storage\Entities\Variable;
 use Elementor\Modules\Variables\Storage\Exceptions\BatchOperationFailed;
 use Elementor\Modules\Variables\Storage\Variables_Repository;
 use Elementor\Modules\Variables\Storage\Exceptions\FatalError;
+<<<<<<< HEAD
 use Elementor\Modules\Variables\PropTypes\Size_Variable_Prop_Type;
 use Elementor\Utils as ElementorUtils;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 class Variables_Service {
 	private Variables_Repository $repo;
@@ -25,6 +28,7 @@ class Variables_Service {
 	}
 
 	public function load() {
+<<<<<<< HEAD
 		$collection = $this->repo->load()->serialize( true );
 		foreach ( $collection['data'] as $id => $variable ) {
 			if ( ! ElementorUtils::has_pro() && Size_Variable_Prop_Type::get_key() === $variable['type'] ) {
@@ -32,6 +36,9 @@ class Variables_Service {
 			}
 		}
 		return $collection;
+=======
+		return $this->repo->load()->serialize( true );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 
 	/**

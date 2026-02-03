@@ -52,8 +52,11 @@
 
 /*! ../../controls-registry/controls-registry */
 
+<<<<<<< HEAD
 /*! ../../controls-registry/create-top-level-object-type */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../../hooks/use-direction */
 
 /*! ../../hooks/use-persist-dynamic-value */
@@ -68,8 +71,11 @@
 
 /*! ../../styles-field-layout */
 
+<<<<<<< HEAD
 /*! ../../sync/get-elementor-globals */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../../utils/get-styles-provider-color */
 
 /*! ../../utils/tracking/subscribe */
@@ -108,8 +114,11 @@
 
 /*! ../dynamic-control */
 
+<<<<<<< HEAD
 /*! ../editing-panel-replacement-registry */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../errors */
 
 /*! ../field-indicators-registry */
@@ -146,10 +155,13 @@
 
 /*! ../style-indicator */
 
+<<<<<<< HEAD
 /*! ../style-tab */
 
 /*! ../style-tab-section */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../styles-inheritance-transformers-registry */
 
 /*! ../styles-inheritance/components/styles-inheritance-section-indicators */
@@ -198,6 +210,11 @@
 
 /*! ./classes-prop-context */
 
+<<<<<<< HEAD
+=======
+/*! ./collapse-icon */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./collapsible-content */
 
 /*! ./column-count-field */
@@ -222,8 +239,11 @@
 
 /*! ./components/popover-body */
 
+<<<<<<< HEAD
 /*! ./components/promotions/init */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./components/section-content */
 
 /*! ./components/settings-control */
@@ -258,6 +278,7 @@
 
 /*! ./controls-registry */
 
+<<<<<<< HEAD
 /*! ./controls-registry/control */
 
 /*! ./controls-registry/controls-registry */
@@ -268,6 +289,12 @@
 
 /*! ./controls-registry/settings-field */
 
+=======
+/*! ./controls-registry/controls-registry */
+
+/*! ./controls-registry/element-controls/registry */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./creatable-autocomplete */
 
 /*! ./create-snapshots-manager */
@@ -284,8 +311,11 @@
 
 /*! ./css-classes/css-class-selector */
 
+<<<<<<< HEAD
 /*! ./custom-css */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./dimensions-field */
 
 /*! ./display-field */
@@ -296,12 +326,17 @@
 
 /*! ./dynamics/init */
 
+<<<<<<< HEAD
 /*! ./dynamics/utils */
 
 /*! ./editing-panel-error-fallback */
 
 /*! ./editing-panel-replacement-registry */
 
+=======
+/*! ./editing-panel-error-fallback */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./editing-panel-tabs */
 
 /*! ./element-context */
@@ -326,6 +361,11 @@
 
 /*! ./gap-control-field */
 
+<<<<<<< HEAD
+=======
+/*! ./get-elementor-config */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./hooks/use-custom-css */
 
 /*! ./hooks/use-dynamic-tag */
@@ -334,8 +374,11 @@
 
 /*! ./hooks/use-prop-dynamic-action */
 
+<<<<<<< HEAD
 /*! ./hooks/use-state-by-element */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./hooks/use-styles-fields */
 
 /*! ./hooks/use-styles-rerender */
@@ -741,6 +784,13 @@
   \*************************************************************************************/
 
 /*!**************************************************************************************!*\
+<<<<<<< HEAD
+=======
+  !*** ./packages/packages/core/editor-editing-panel/src/components/collapse-icon.tsx ***!
+  \**************************************************************************************/
+
+/*!**************************************************************************************!*\
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-editing-panel/src/components/control-label.tsx ***!
   \**************************************************************************************/
 
@@ -793,10 +843,13 @@
   \***************************************************************************************/
 
 /*!****************************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-editing-panel/src/components/promotions/init.tsx ***!
   \****************************************************************************************/
 
 /*!****************************************************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-editing-panel/src/components/section-content.tsx ***!
   \****************************************************************************************/
 
@@ -889,6 +942,7 @@
   \**********************************************************************************************/
 
 /*!**********************************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-editing-panel/src/components/promotions/custom-css.tsx ***!
   \**********************************************************************************************/
 
@@ -899,6 +953,14 @@
 /*!************************************************************************************************!*\
   !*** ./packages/packages/core/editor-editing-panel/src/editing-panel-replacement-registry.tsx ***!
   \************************************************************************************************/
+=======
+  !*** ./packages/packages/core/editor-editing-panel/src/controls-registry/settings-field.tsx ***!
+  \**********************************************************************************************/
+
+/*!***********************************************************************************************!*\
+  !*** ./packages/packages/core/editor-editing-panel/src/dynamics/sync/get-elementor-config.ts ***!
+  \***********************************************************************************************/
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 /*!*************************************************************************************************!*\
   !*** ./packages/packages/core/editor-editing-panel/src/contexts/styles-inheritance-context.tsx ***!

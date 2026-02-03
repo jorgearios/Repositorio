@@ -1,6 +1,7 @@
 {% if settings.image.src is not empty %}
 	{% set id_attribute = settings._cssid is not empty ? 'id=' ~ settings._cssid | e('html_attr') : '' %}	
 	{% if settings.link.href %}
+<<<<<<< HEAD
 		<{{ settings.link.tag | e('html_tag') }}
 			{% set linkAttr = settings.link.tag == 'a' ? 'href' : 'data-action-link' %}
 			{{ linkAttr }}="{{ settings.link.href | raw }}"
@@ -9,6 +10,9 @@
 			data-interaction-id="{{ id }}"
 			data-interactions="{{ interactions | json_encode | e('html_attr') }}"
 		>
+=======
+		<a href="{{ settings.link.href }}" class="{{ base_styles['link-base'] }}" target="{{ settings.link.target }}" data-interaction-id="{{ id }}" data-interactions="{{ interactions | json_encode | e('html_attr') }}">
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	{% endif %}
 	<img class="{{ base_styles['base'] }} {{ settings.classes | join(' ') }}" 
 		{% if not settings.link.href %}
@@ -25,6 +29,10 @@
 		{% endfor %}
 	/>
 	{% if settings.link.href %}
+<<<<<<< HEAD
 		</{{ settings.link.tag | e('html_tag') }}>
+=======
+		</a>
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	{% endif %}
 {% endif %}

@@ -2,8 +2,11 @@
 namespace Elementor\Modules\Components\Documents;
 
 use Elementor\Core\Base\Document;
+<<<<<<< HEAD
 use Elementor\Core\Utils\Api\Parse_Result;
 use Elementor\Modules\Components\OverridableProps\Component_Overridable_Props_Parser;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -13,6 +16,7 @@ class Component extends Document {
 	const TYPE = 'elementor_component';
 	const COMPONENT_UID_META_KEY = '_elementor_component_uid';
 	const OVERRIDABLE_PROPS_META_KEY = '_elementor_component_overridable_props';
+<<<<<<< HEAD
 	const ARCHIVED_META_KEY = '_elementor_component_is_archived';
 	const ARCHIVED_AT_META_KEY = '_elementor_component_archived_at';
 	const COMPONENT_CUSTOM_META_KEYS = [
@@ -21,6 +25,8 @@ class Component extends Document {
 		self::ARCHIVED_META_KEY,
 		self::ARCHIVED_AT_META_KEY,
 	];
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 	public static function get_properties() {
 		$properties = parent::get_properties();
@@ -70,6 +76,7 @@ class Component extends Document {
 	}
 
 	public function get_overridable_props(): Component_Overridable_Props {
+<<<<<<< HEAD
 		$meta = $this->get_json_meta( self::OVERRIDABLE_PROPS_META_KEY );
 
 		return Component_Overridable_Props::make( $meta ?? [] );
@@ -139,5 +146,10 @@ class Component extends Document {
 		}
 
 		return $success;
+=======
+		$meta = $this->get_meta( self::OVERRIDABLE_PROPS_META_KEY );
+
+		return new Component_Overridable_Props( $meta );
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	}
 }

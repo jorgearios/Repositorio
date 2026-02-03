@@ -3,6 +3,7 @@
 * @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
 */
 
+<<<<<<< HEAD
 /*! ../../../components/outline-overlay */
 
 /*! ../../../composition-builder/composition-builder */
@@ -11,18 +12,23 @@
 
 /*! ../../../hooks/use-floating-on-element */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../../renderers/multi-props */
 
 /*! ../../resources/widgets-schema-resource */
 
 /*! ../../utils/do-update-element-property */
 
+<<<<<<< HEAD
 /*! ../../utils/validate-input */
 
 /*! ../base */
 
 /*! ../create-templated-element-type */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../create-transformer */
 
 /*! ../hooks/use-bind-react-props-to-element */
@@ -37,31 +43,48 @@
 
 /*! ../hooks/use-style-items */
 
+<<<<<<< HEAD
 /*! ../mcp/utils/do-update-element-property */
 
 /*! ../mcp/utils/validate-input */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../renderers/create-dom-renderer */
 
 /*! ../renderers/create-props-resolver */
 
 /*! ../renderers/create-styles-renderer */
 
+<<<<<<< HEAD
 /*! ../resources/widgets-schema-resource */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../settings-transformers-registry */
 
 /*! ../style-transformers-registry */
 
 /*! ../sync/enqueue-font */
 
+<<<<<<< HEAD
+=======
+/*! ../sync/get-canvas-iframe-document */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ../utils */
 
 /*! ../utils/abort-previous-runs */
 
+<<<<<<< HEAD
 /*! ../utils/signalized-process */
 
 /*! ./canvas-inline-editor */
+=======
+/*! ../utils/inline-editing-utils */
+
+/*! ../utils/signalized-process */
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 /*! ./cjs/react-jsx-runtime.development.js */
 
@@ -85,30 +108,40 @@
 
 /*! ./init-style-transformers */
 
+<<<<<<< HEAD
 /*! ./inline-editing-eligibility */
 
 /*! ./inline-editing-utils */
 
 /*! ./inline-editing/inline-editing-elements */
+=======
+/*! ./inline-editor-overlay */
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 /*! ./legacy/create-templated-element-type */
 
 /*! ./legacy/init-legacy-views */
 
+<<<<<<< HEAD
 /*! ./legacy/replacements/manager */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./legacy/types */
 
 /*! ./mcp/canvas-mcp */
 
 /*! ./mcp/mcp-description */
 
+<<<<<<< HEAD
 /*! ./mcp/resources/breakpoints-resource */
 
 /*! ./mcp/resources/document-structure-resource */
 
 /*! ./mcp/resources/widgets-schema-resource */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./multi-props */
 
 /*! ./outline-overlay */
@@ -121,6 +154,7 @@
 
 /*! ./renderers/create-props-resolver */
 
+<<<<<<< HEAD
 /*! ./renderers/errors */
 
 /*! ./replacements/manager */
@@ -131,6 +165,10 @@
 
 /*! ./resources/document-structure-resource */
 
+=======
+/*! ./reset-style */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./resources/widgets-schema-resource */
 
 /*! ./schema */
@@ -139,12 +177,20 @@
 
 /*! ./style-commands/init-style-commands */
 
+<<<<<<< HEAD
 /*! ./style-commands/utils */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./style-transformers-registry */
 
 /*! ./sync/drag-element-from-panel */
 
+<<<<<<< HEAD
+=======
+/*! ./sync/get-canvas-iframe-document */
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! ./tools/build-composition/tool */
 
 /*! ./tools/configure-element/tool */
@@ -283,8 +329,11 @@
 
 /*! react-dom */
 
+<<<<<<< HEAD
 /*! react-dom/client */
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*! react/jsx-runtime */
 
 /*! tabbable */
@@ -350,10 +399,13 @@
   \**************************************************/
 
 /*!***************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/node_modules/react-dom/client.js ***!
   \***************************************************/
 
 /*!***************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** external ["elementorV2","editorResponsive"] ***!
   \***************************************************/
 
@@ -458,6 +510,7 @@
   \******************************************************************************/
 
 /*!******************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-canvas/src/legacy/replacements/base.ts ***!
   \******************************************************************************/
 
@@ -466,6 +519,8 @@
   \******************************************************************************/
 
 /*!******************************************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-canvas/src/utils/signalized-process.ts ***!
   \******************************************************************************/
 
@@ -501,6 +556,13 @@
   !*** ./packages/packages/core/editor-canvas/src/style-commands/reset-style.ts ***!
   \********************************************************************************/
 
+<<<<<<< HEAD
+=======
+/*!********************************************************************************!*\
+  !*** ./packages/packages/core/editor-canvas/src/utils/inline-editing-utils.ts ***!
+  \********************************************************************************/
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!*********************************************************************************!*\
   !*** ./packages/node_modules/@floating-ui/utils/dist/floating-ui.utils.dom.mjs ***!
   \*********************************************************************************/
@@ -510,10 +572,13 @@
   \*********************************************************************************/
 
 /*!*********************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-canvas/src/legacy/replacements/manager.ts ***!
   \*********************************************************************************/
 
 /*!*********************************************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-canvas/src/style-transformers-registry.ts ***!
   \*********************************************************************************/
 
@@ -566,6 +631,13 @@
   \*************************************************************************************/
 
 /*!*************************************************************************************!*\
+<<<<<<< HEAD
+=======
+  !*** ./packages/packages/core/editor-canvas/src/sync/get-canvas-iframe-document.ts ***!
+  \*************************************************************************************/
+
+/*!*************************************************************************************!*\
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-canvas/src/transformers/create-transformer.ts ***!
   \*************************************************************************************/
 
@@ -582,6 +654,13 @@
   \**************************************************************************************/
 
 /*!***************************************************************************************!*\
+<<<<<<< HEAD
+=======
+  !*** ./packages/packages/core/editor-canvas/src/components/inline-editor-overlay.tsx ***!
+  \***************************************************************************************/
+
+/*!***************************************************************************************!*\
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-canvas/src/components/interactions-renderer.tsx ***!
   \***************************************************************************************/
 
@@ -590,10 +669,13 @@
   \***************************************************************************************/
 
 /*!****************************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-canvas/src/mcp/resources/breakpoints-resource.ts ***!
   \****************************************************************************************/
 
 /*!****************************************************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-canvas/src/mcp/tools/build-composition/prompt.ts ***!
   \****************************************************************************************/
 
@@ -662,10 +744,13 @@
   \********************************************************************************************/
 
 /*!*********************************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-canvas/src/composition-builder/composition-builder.ts ***!
   \*********************************************************************************************/
 
 /*!*********************************************************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-canvas/src/transformers/settings/query-transformer.ts ***!
   \*********************************************************************************************/
 
@@ -674,10 +759,13 @@
   \**********************************************************************************************/
 
 /*!***********************************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-canvas/src/mcp/resources/document-structure-resource.ts ***!
   \***********************************************************************************************/
 
 /*!***********************************************************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-canvas/src/transformers/create-transformers-registry.ts ***!
   \***********************************************************************************************/
 
@@ -757,6 +845,7 @@
   !*** ./packages/packages/core/editor-canvas/src/transformers/styles/create-combine-array-transformer.ts ***!
   \**********************************************************************************************************/
 
+<<<<<<< HEAD
 /*!*************************************************************************************************************!*\
   !*** ./packages/packages/core/editor-canvas/src/legacy/replacements/inline-editing/inline-editing-utils.ts ***!
   \*************************************************************************************************************/
@@ -765,6 +854,8 @@
   !*** ./packages/packages/core/editor-canvas/src/legacy/replacements/inline-editing/canvas-inline-editor.tsx ***!
   \**************************************************************************************************************/
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /*!**************************************************************************************************************!*\
   !*** ./packages/packages/core/editor-canvas/src/transformers/styles/background-color-overlay-transformer.ts ***!
   \**************************************************************************************************************/
@@ -774,17 +865,23 @@
   \**************************************************************************************************************/
 
 /*!*****************************************************************************************************************!*\
+<<<<<<< HEAD
   !*** ./packages/packages/core/editor-canvas/src/legacy/replacements/inline-editing/inline-editing-elements.tsx ***!
   \*****************************************************************************************************************/
 
 /*!*****************************************************************************************************************!*\
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
   !*** ./packages/packages/core/editor-canvas/src/transformers/styles/background-gradient-overlay-transformer.ts ***!
   \*****************************************************************************************************************/
 
 /*!*****************************************************************************************************************!*\
   !*** ./packages/packages/core/editor-canvas/src/transformers/styles/background-image-size-scale-transformer.ts ***!
   \*****************************************************************************************************************/
+<<<<<<< HEAD
 
 /*!*******************************************************************************************************************!*\
   !*** ./packages/packages/core/editor-canvas/src/legacy/replacements/inline-editing/inline-editing-eligibility.ts ***!
   \*******************************************************************************************************************/
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275

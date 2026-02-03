@@ -8,7 +8,10 @@ use Elementor\Modules\GlobalClasses\Module as GlobalClassesModule;
 use Elementor\Modules\NestedElements\Module as NestedElementsModule;
 use Elementor\Modules\AtomicWidgets\Module as AtomicWidgetsModule;
 use Elementor\Modules\Variables\Module as VariablesModule;
+<<<<<<< HEAD
 use Elementor\Modules\Components\Module as ComponentsModule;
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Plugin;
 
 class Opt_In {
@@ -19,7 +22,10 @@ class Opt_In {
 		AtomicWidgetsModule::EXPERIMENT_NAME,
 		GlobalClassesModule::NAME,
 		VariablesModule::EXPERIMENT_NAME,
+<<<<<<< HEAD
 		ComponentsModule::EXPERIMENT_NAME,
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	];
 
 	const OPT_IN_FEATURES = [
@@ -29,7 +35,10 @@ class Opt_In {
 		AtomicWidgetsModule::EXPERIMENT_NAME,
 		GlobalClassesModule::NAME,
 		VariablesModule::EXPERIMENT_NAME,
+<<<<<<< HEAD
 		ComponentsModule::EXPERIMENT_NAME,
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	];
 
 	public function init() {

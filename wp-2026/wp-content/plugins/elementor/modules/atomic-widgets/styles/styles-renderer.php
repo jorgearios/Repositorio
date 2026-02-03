@@ -121,12 +121,23 @@ class Styles_Renderer {
 			return '';
 		}
 
+<<<<<<< HEAD
 		if ( isset( $variant['meta']['state'] ) ) {
 			$selector = Style_States::get_selector_with_state( $base_selector, $variant['meta']['state'] );
 		} else {
 			$selector = $base_selector;
 		}
 
+=======
+		$state = '';
+
+		if ( isset( $variant['meta']['state'] ) ) {
+			$state = $this->get_state_with_selector( $variant['meta']['state'] );
+		}
+
+		$selector = $base_selector . $state;
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		$style_declaration = $selector . '{' . $css . $custom_css . '}';
 
 		if ( isset( $variant['meta']['breakpoint'] ) ) {
@@ -136,6 +147,21 @@ class Styles_Renderer {
 		return $style_declaration;
 	}
 
+<<<<<<< HEAD
+=======
+	private function get_state_with_selector( string $state ): string {
+		if ( Style_States::is_class_state( $state ) ) {
+			return '.' . $state;
+		}
+
+		if ( Style_States::is_pseudo_state( $state ) ) {
+			return ':' . $state;
+		}
+
+		return '';
+	}
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 
 	private function props_to_css_string( array $props ): string {
 		$schema = Style_Schema::get();

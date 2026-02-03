@@ -6,25 +6,40 @@ class Style_States {
 	const HOVER = 'hover';
 	const ACTIVE = 'active';
 	const FOCUS = 'focus';
+<<<<<<< HEAD
 	const FOCUS_VISIBLE = 'focus-visible';
 
 	const SELECTED = 'e--selected';
 
 	private static function get_pseudo_states(): array {
+=======
+
+	const SELECTED = 'e--selected';
+
+	public static function get_pseudo_states(): array {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		return [
 			self::HOVER,
 			self::ACTIVE,
 			self::FOCUS,
+<<<<<<< HEAD
 			self::FOCUS_VISIBLE,
 		];
 	}
 
 	private static function get_class_states(): array {
+=======
+		];
+	}
+
+	public static function get_class_states(): array {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		return [
 			self::SELECTED,
 		];
 	}
 
+<<<<<<< HEAD
 	private static function get_additional_states_map(): array {
 		return [
 			self::HOVER => [ self::FOCUS_VISIBLE ],
@@ -64,6 +79,11 @@ class Style_States {
 			...array_filter( self::get_pseudo_states(), function ( $state ) {
 				return ! in_array( $state, self::get_additional_states_map()[ $state ] ?? [], true );
 			} ),
+=======
+	public static function get_valid_states(): array {
+		return [
+			...self::get_pseudo_states(),
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			...self::get_class_states(),
 			null,
 		];

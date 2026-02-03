@@ -10,6 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class Save_Components_Validator {
+<<<<<<< HEAD
+=======
+	const MAX_COMPONENTS = 50;
+
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 	private Collection $components;
 
 	public function __construct( Collection $components ) {
@@ -40,10 +45,16 @@ class Save_Components_Validator {
 	}
 
 	private function validate_count( Collection $data ): array {
+<<<<<<< HEAD
 		$non_archived_components = $this->components->filter( fn ( $component ) => ! $component['is_archived'] );
 		$count = $non_archived_components->count() + $data->count();
 
 		if ( $count > Components_REST_API::MAX_COMPONENTS ) {
+=======
+		$count = $this->components->count() + $data->count();
+
+		if ( $count > self::MAX_COMPONENTS ) {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 			return [ esc_html__( 'Maximum number of components exceeded.', 'elementor' ) ];
 		}
 
@@ -59,9 +70,15 @@ class Save_Components_Validator {
 				$uid = $component['uid'];
 
 				$is_title_exists = $this->components->some(
+<<<<<<< HEAD
 					fn ( $component ) => ! $component['is_archived'] && $component['title'] === $title
 				) || $data->filter(
 					fn ( $component ) => ! $component['title'] === $title
+=======
+					fn ( $component ) => $component['title'] === $title
+				) || $data->filter(
+					fn ( $component ) => $component['title'] === $title
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 				)->count() > 1;
 
 				if ( $is_title_exists ) {

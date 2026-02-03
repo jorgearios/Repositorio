@@ -170,7 +170,11 @@ class Rest_Api {
 	 *
 	 * @return \Elementor\Core\Common\Modules\Connect\Apps\Library|null
 	 */
+<<<<<<< HEAD
 	public function get_connect_app() {
+=======
+	private function get_connect_app() {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		$connect = Plugin::$instance->common->get_component( 'connect' );
 		if ( ! $connect ) {
 			return null;

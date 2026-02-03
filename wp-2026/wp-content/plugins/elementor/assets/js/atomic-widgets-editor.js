@@ -660,7 +660,11 @@ var createAtomicTabModel = function createAtomicTabModel() {
           paragraph = _elements[0];
         var position = (_this$attributes$edit = this.attributes.editor_settings) === null || _this$attributes$edit === void 0 ? void 0 : _this$attributes$edit.initial_position;
         paragraph.settings.paragraph = {
+<<<<<<< HEAD
           $$type: 'html',
+=======
+          $$type: 'string',
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
           value: "Tab ".concat(position)
         };
         return elements;
@@ -1119,6 +1123,7 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 exports["default"] = createAtomicElementBaseView;
+<<<<<<< HEAD
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ "../node_modules/@babel/runtime/regenerator/index.js"));
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ "../node_modules/@babel/runtime/helpers/typeof.js"));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "../node_modules/@babel/runtime/helpers/asyncToGenerator.js"));
@@ -1127,10 +1132,18 @@ var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/
 var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
 var _elementTypes = __webpack_require__(/*! elementor-editor/utils/element-types */ "../assets/dev/js/editor/utils/element-types.js");
 var _atomicElementEmptyView = _interopRequireDefault(__webpack_require__(/*! ./container/atomic-element-empty-view */ "../modules/atomic-widgets/assets/js/editor/container/atomic-element-empty-view.js"));
+=======
+var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "../node_modules/@babel/runtime/helpers/defineProperty.js"));
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "../node_modules/@babel/runtime/helpers/toConsumableArray.js"));
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "../node_modules/@babel/runtime/helpers/slicedToArray.js"));
+var _atomicElementEmptyView = _interopRequireDefault(__webpack_require__(/*! ./container/atomic-element-empty-view */ "../modules/atomic-widgets/assets/js/editor/container/atomic-element-empty-view.js"));
+var _elementTypes = __webpack_require__(/*! elementor-editor/utils/element-types */ "../assets/dev/js/editor/utils/element-types.js");
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0, _defineProperty2.default)(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
 var BaseElementView = elementor.modules.elements.views.BaseElement;
 function createAtomicElementBaseView(type) {
+<<<<<<< HEAD
   var resolvedTagCache = new WeakMap();
   var AtomicElementView = BaseElementView.extend({
     template: Marionette.TemplateCache.get("#tmpl-elementor-".concat(type, "-content")),
@@ -1150,6 +1163,19 @@ function createAtomicElementBaseView(type) {
         return 'a';
       }
       return tagValue || this.model.config.default_html_tag || 'div';
+=======
+  var AtomicElementView = BaseElementView.extend({
+    template: Marionette.TemplateCache.get("#tmpl-elementor-".concat(type, "-content")),
+    emptyView: _atomicElementEmptyView.default,
+    tagName: function tagName() {
+      if (this.haveLink()) {
+        return 'a';
+      }
+      var tagControl = this.model.getSetting('tag');
+      var tagControlValue = (tagControl === null || tagControl === void 0 ? void 0 : tagControl.value) || tagControl;
+      var defaultTag = this.model.config.default_html_tag;
+      return tagControlValue || defaultTag;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     },
     getChildViewContainer: function getChildViewContainer() {
       this.childViewContainer = '';
@@ -1167,6 +1193,7 @@ function createAtomicElementBaseView(type) {
       });
       return ['widget', 'container'].concat((0, _toConsumableArray2.default)(atomicElements));
     },
+<<<<<<< HEAD
     getRenderContext: function getRenderContext() {
       var _this$_parent, _this$_parent$getRend;
       return (_this$_parent = this._parent) === null || _this$_parent === void 0 || (_this$_parent$getRend = _this$_parent.getRenderContext) === null || _this$_parent$getRend === void 0 ? void 0 : _this$_parent$getRend.call(_this$_parent);
@@ -1175,6 +1202,8 @@ function createAtomicElementBaseView(type) {
       var _this$_parent2, _this$_parent2$getRes;
       return (_this$_parent2 = this._parent) === null || _this$_parent2 === void 0 || (_this$_parent2$getRes = _this$_parent2.getResolverRenderContext) === null || _this$_parent2$getRes === void 0 ? void 0 : _this$_parent2$getRes.call(_this$_parent2);
     },
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     className: function className() {
       return "".concat(BaseElementView.prototype.className.apply(this), " e-con e-atomic-element ").concat(this.getClassString());
     },
@@ -1194,6 +1223,13 @@ function createAtomicElementBaseView(type) {
       if (cssId) {
         local.id = cssId.value;
       }
+<<<<<<< HEAD
+=======
+      var href = this.getHref();
+      if (href) {
+        local.href = href;
+      }
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
       local['data-interaction-id'] = this.model.get('id');
       customAttributes.forEach(function (attribute) {
         var _attribute$value, _attribute$value2;
@@ -1280,6 +1316,7 @@ function createAtomicElementBaseView(type) {
       this._parent.removeChildView(this);
       parent.addChild(this.model, AtomicElementView, this._index);
     },
+<<<<<<< HEAD
     render: function render() {
       var _this2 = this;
       this._currentRenderPromise = new Promise(function (resolve) {
@@ -1399,13 +1436,22 @@ function createAtomicElementBaseView(type) {
     },
     onRender: function onRender() {
       var _this7 = this;
+=======
+    onRender: function onRender() {
+      var _this2 = this;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
       this.dispatchPreviewEvent('elementor/element/render');
       BaseElementView.prototype.onRender.apply(this, arguments);
 
       // Defer to wait for everything to render.
       setTimeout(function () {
+<<<<<<< HEAD
         _this7.droppableInitialize();
         _this7.updateHandlesPosition();
+=======
+        _this2.droppableInitialize();
+        _this2.updateHandlesPosition();
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
       });
     },
     onDestroy: function onDestroy() {
@@ -1422,6 +1468,7 @@ function createAtomicElementBaseView(type) {
         }
       }));
     },
+<<<<<<< HEAD
     _hasLink: function _hasLink(renderContext) {
       var _resolvedLink$value;
       var linkSetting = this.model.getSetting('link');
@@ -1463,6 +1510,22 @@ function createAtomicElementBaseView(type) {
         attr: 'href',
         value: hrefPrefix + value
       };
+=======
+    haveLink: function haveLink() {
+      var _this$model$getSettin3;
+      return !!((_this$model$getSettin3 = this.model.getSetting('link')) !== null && _this$model$getSettin3 !== void 0 && (_this$model$getSettin3 = _this$model$getSettin3.value) !== null && _this$model$getSettin3 !== void 0 && (_this$model$getSettin3 = _this$model$getSettin3.destination) !== null && _this$model$getSettin3 !== void 0 && _this$model$getSettin3.value);
+    },
+    getHref: function getHref() {
+      if (!this.haveLink()) {
+        return;
+      }
+      var _this$model$getSettin4 = this.model.getSetting('link').value.destination,
+        $$type = _this$model$getSettin4.$$type,
+        value = _this$model$getSettin4.value;
+      var isPostId = 'number' === $$type;
+      var hrefPrefix = isPostId ? elementor.config.home_url + '/?p=' : '';
+      return hrefPrefix + value;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     },
     droppableInitialize: function droppableInitialize() {
       this.$el.html5Droppable(this.getDroppableOptions());
@@ -1473,11 +1536,16 @@ function createAtomicElementBaseView(type) {
      * @return {Object} groups
      */
     getContextMenuGroups: function getContextMenuGroups() {
+<<<<<<< HEAD
       var _this8 = this,
+=======
+      var _this3 = this,
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
         _elementorCommon$conf;
       var saveActions = [{
         name: 'save',
         title: __('Save as a template', 'elementor'),
+<<<<<<< HEAD
         callback: this.saveAsTemplate.bind(this),
         isEnabled: function isEnabled() {
           return !_this8.getContainer().isLocked();
@@ -1493,6 +1561,22 @@ function createAtomicElementBaseView(type) {
           callback: this.saveAsComponent.bind(this),
           isEnabled: function isEnabled() {
             return !_this8.getContainer().isLocked();
+=======
+        shortcut: "<span class=\"elementor-context-menu-list__item__shortcut__new-badge\">".concat(__('New', 'elementor'), "</span>"),
+        callback: this.saveAsTemplate.bind(this),
+        isEnabled: function isEnabled() {
+          return !_this3.getContainer().isLocked();
+        }
+      }];
+      if ((_elementorCommon$conf = elementorCommon.config.experimentalFeatures) !== null && _elementorCommon$conf !== void 0 && _elementorCommon$conf.e_components) {
+        saveActions.unshift({
+          name: 'save-component',
+          title: __('Save as a component', 'elementor'),
+          shortcut: "<span class=\"elementor-context-menu-list__item__shortcut__new-badge\">".concat(__('New', 'elementor'), "</span>"),
+          callback: this.saveAsComponent.bind(this),
+          isEnabled: function isEnabled() {
+            return !_this3.getContainer().isLocked();
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
           }
         });
       }
@@ -1552,7 +1636,11 @@ function createAtomicElementBaseView(type) {
       };
     },
     getDroppableOptions: function getDroppableOptions() {
+<<<<<<< HEAD
       var _this9 = this;
+=======
+      var _this4 = this;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
       var items = '> .elementor-element, > .elementor-empty-view .elementor-first-add';
       return {
         axis: null,
@@ -1564,7 +1652,11 @@ function createAtomicElementBaseView(type) {
         placeholderClass: 'elementor-sortable-placeholder elementor-widget-placeholder',
         hasDraggingOnChildClass: 'e-dragging-over',
         getDropContainer: function getDropContainer() {
+<<<<<<< HEAD
           return _this9.getContainer();
+=======
+          return _this4.getContainer();
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
         },
         onDropping: function onDropping(side, event) {
           event.stopPropagation();
@@ -1576,12 +1668,21 @@ function createAtomicElementBaseView(type) {
             containerElement = event.currentTarget.parentElement,
             elements = Array.from((containerElement === null || containerElement === void 0 ? void 0 : containerElement.querySelectorAll(':scope > .elementor-element')) || []);
           var targetIndex = elements.indexOf(event.currentTarget);
+<<<<<<< HEAD
           if (_this9.isPanelElement(draggedView, draggedElement)) {
             var _elementorCommon;
             if (_this9.draggingOnBottomOrRightSide(side) && !_this9.emptyViewIsCurrentlyBeingDraggedOver()) {
               targetIndex++;
             }
             _this9.onDrop(event, {
+=======
+          if (_this4.isPanelElement(draggedView, draggedElement)) {
+            var _elementorCommon;
+            if (_this4.draggingOnBottomOrRightSide(side) && !_this4.emptyViewIsCurrentlyBeingDraggedOver()) {
+              targetIndex++;
+            }
+            _this4.onDrop(event, {
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
               at: targetIndex
             });
             if ((_elementorCommon = elementorCommon) !== null && _elementorCommon !== void 0 && (_elementorCommon = _elementorCommon.eventsManager) !== null && _elementorCommon !== void 0 && _elementorCommon.dispatchEvent) {
@@ -1601,6 +1702,7 @@ function createAtomicElementBaseView(type) {
             }
             return;
           }
+<<<<<<< HEAD
           if (_this9.isParentElement(draggedView.getContainer().id)) {
             return;
           }
@@ -1609,6 +1711,16 @@ function createAtomicElementBaseView(type) {
             return;
           }
           _this9.moveExistingElement(side, draggedView, containerElement, elements, targetIndex, draggedElement);
+=======
+          if (_this4.isParentElement(draggedView.getContainer().id)) {
+            return;
+          }
+          if (_this4.emptyViewIsCurrentlyBeingDraggedOver()) {
+            _this4.moveDroppedItem(draggedView, 0);
+            return;
+          }
+          _this4.moveExistingElement(side, draggedView, containerElement, elements, targetIndex, draggedElement);
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
         }
       };
     },
@@ -1767,6 +1879,7 @@ function createAtomicElementBaseView(type) {
       return this.container.parent && 'document' === this.container.parent.id;
     },
     isFirstElementInStructure: function isFirstElementInStructure() {
+<<<<<<< HEAD
       if (!this.model.collection) {
         return true;
       }
@@ -1838,6 +1951,9 @@ function createAtomicElementBaseView(type) {
         renderContext: renderContext
       });
       return this._resolvePropValue(transformed, renderContext);
+=======
+      return 0 === this.model.collection.indexOf(this.model);
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
     }
   });
   return AtomicElementView;
@@ -2193,6 +2309,7 @@ function regenerateLocalStyleIds(container) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../node_modules/@babel/runtime/helpers/OverloadYield.js":
 /*!***************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/OverloadYield.js ***!
@@ -2206,6 +2323,8 @@ module.exports = _OverloadYield, module.exports.__esModule = true, module.export
 
 /***/ }),
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../node_modules/@babel/runtime/helpers/arrayLikeToArray.js":
 /*!******************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/arrayLikeToArray.js ***!
@@ -2262,6 +2381,7 @@ module.exports = _assertThisInitialized, module.exports.__esModule = true, modul
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../node_modules/@babel/runtime/helpers/asyncToGenerator.js":
 /*!******************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/asyncToGenerator.js ***!
@@ -2297,6 +2417,8 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 
 /***/ }),
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../node_modules/@babel/runtime/helpers/classCallCheck.js":
 /*!****************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/classCallCheck.js ***!
@@ -2530,6 +2652,7 @@ module.exports = _readOnlyError, module.exports.__esModule = true, module.export
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../node_modules/@babel/runtime/helpers/regenerator.js":
 /*!*************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/regenerator.js ***!
@@ -2866,6 +2989,8 @@ module.exports = _regeneratorValues, module.exports.__esModule = true, module.ex
 
 /***/ }),
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../node_modules/@babel/runtime/helpers/setPrototypeOf.js":
 /*!****************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
@@ -3004,6 +3129,7 @@ module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, 
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "../node_modules/@babel/runtime/regenerator/index.js":
 /*!***********************************************************!*\
   !*** ../node_modules/@babel/runtime/regenerator/index.js ***!
@@ -3029,6 +3155,8 @@ try {
 
 /***/ }),
 
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 /***/ "../node_modules/react-dom/client.js":
 /*!*******************************************!*\
   !*** ../node_modules/react-dom/client.js ***!

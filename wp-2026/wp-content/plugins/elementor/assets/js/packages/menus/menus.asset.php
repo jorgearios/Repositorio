@@ -9,7 +9,10 @@ return [
 	'handle' => 'elementor-v2-menus',
 	'deps' => [
 		'elementor-v2-locations',
+<<<<<<< HEAD
 		'elementor-v2-utils',
+=======
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 		'react',
 	],
 ];

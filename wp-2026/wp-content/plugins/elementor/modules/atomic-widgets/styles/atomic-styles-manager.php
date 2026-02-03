@@ -6,7 +6,11 @@ use Elementor\Core\Base\Document;
 use Elementor\Core\Breakpoints\Breakpoint;
 use Elementor\Core\Utils\Collection;
 use Elementor\Modules\AtomicWidgets\Utils\Memo;
+<<<<<<< HEAD
 use Elementor\Modules\AtomicWidgets\Styles\CacheValidity\Cache_Validity;
+=======
+use Elementor\Modules\AtomicWidgets\CacheValidity\Cache_Validity;
+>>>>>>> 925a27b3365a70f9d425839bd2b9f9ff46969275
 use Elementor\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
